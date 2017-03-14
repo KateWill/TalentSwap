@@ -10,4 +10,25 @@ html
     - src = process.env.NODE_ENV === 'production' ? 'vendor.js' : 'http://localhost:8080/vendor.js'
     script(src=src)
   body
+    nav
+      .nav-wrapper.d1c4e9.deep-purple.lighten-4 
+        .row
+          .col.s6
+            ul
+              li
+                a.yellow-text(href='/') Home
+              li  
+                a.yellow-text(href='/about') About
+              if(user) 
+                li 
+                  a.yellow-text(href='/dashboard') Dashboard
+                li
+                  a.yellow-text(href='/logout') Logout
+          if(!user)
+            .col.s6
+              form(action='/login', method='POST')
+                input.col.s3(placeholder='Username', name='username', type='text', required)
+                input.col.s3(placeholder='Password', name='password', type='password', required)
+                button.btn.col.s3.fbc02d.yellow.darken-2(type='submit') Login
+                a.btn.col.s3.right.fbc02d.yellow.darken-2(href='/register') Register
     block content

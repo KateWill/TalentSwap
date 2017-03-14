@@ -4,6 +4,7 @@ import { logout, refreshLogin } from '../actions/auth';
 import { connect } from 'react-redux';
 import Flash from '../components/Flash';
 
+
 class App extends React.Component {
   componentDidMount() {
     $(".button-collapse").sideNav({ closeOnClick: true });
@@ -61,9 +62,9 @@ class App extends React.Component {
     return (
       <div>
         <nav>
-          <div className="nav-wrapper">
-            <a href="#!" className="brand-logo">Logo</a>
-            <a href="#" data-activates="mobile" className="button-collapse"><i className="material-icons">menu</i></a>
+          <div className="nav-wrapper #7986cb indigo lighten-2">
+            <a href="/" className="brand-logo">Talent Swap</a>
+            <a href="/" data-activates="mobile" className="button-collapse"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-med-and-down">
               { this.links() }
               { this.authLinks() }
@@ -76,6 +77,10 @@ class App extends React.Component {
         </nav>
         <Flash />
         {this.props.children}
+        <p> Header image with logo goes below!</p>
+        <div className="row">
+          <img className="col s12" src="images/cook2.jpg" />
+        </div>
       </div>
     );
   }
