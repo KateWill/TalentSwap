@@ -9,7 +9,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const mongoose = require('mongoose');
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/capstone-starter'
-mongoose.connect(mongoURI);
+mongoose.connect(mongoUri);
 
 const index = require('./routes/index');
 const auth = require('./routes/auth');
