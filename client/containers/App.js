@@ -37,8 +37,8 @@ class App extends React.Component {
         });
         links.push(
           <li key="logout">
-            <a 
-              href="#" 
+            <a
+              href="#"
               onClick={ e => {
                 this.props.dispatch(logout(this.props.router))
               }}
@@ -81,7 +81,7 @@ class App extends React.Component {
         {this.props.children}
         <p> Header image with logo goes below!</p>
         <div className="row">
-          <img className="col s12" src="images/cook2.jpg" />
+          <img className="col s12" src="images/mainimg1.jpg" />
         </div>
       </div>
     );
