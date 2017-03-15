@@ -24,11 +24,13 @@ class Auth extends React.Component {
     return (
       <div>
         <h2 className="center">{this.props.route.title}</h2>
-          <form onSubmit={this.handleSubmit}>
-            <input type="email" required={true} ref={ n => this.email = n } placeholder="email" />
-            <input type="password" required={true} ref={n => this.password = n } placeholder="password" />
-           <button className="btn yellow darken-2">{this.props.route.title}</button>
-         </form>
+          <div className="container">
+            <form onSubmit={this.handleSubmit}>
+              <input type="email" required={true} ref={ n => this.email = n } placeholder="email" />
+              <input type="password" required={true} ref={n => this.password = n } placeholder="password" />
+            <button className="btn yellow darken-2">{this.props.route.title}</button>
+          </form>
+         </div>
       </div>
     )
   }
