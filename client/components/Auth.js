@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { refreshLogin } from '../actions/auth';
 import { setFlash } from '../actions/flash';
-
+// this is the login component
 class Auth extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();

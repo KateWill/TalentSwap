@@ -10,7 +10,7 @@ class App extends React.Component {
     $(".button-collapse").sideNav({ closeOnClick: true });
     this.props.dispatch(refreshLogin());
   }
-
+//this is the home button
   links = () => {
     return [
       { name: 'Home', path: '/' },
@@ -18,7 +18,7 @@ class App extends React.Component {
       return this.link(i, link.name, link.path)
     })
   }
-
+//this toggles the pathname to active/not
   link = (i, name, path) => {
     let activeClass = this.props.location.pathname === path ? 'active' : '';
     return (
@@ -27,7 +27,8 @@ class App extends React.Component {
       </li>
     )
   }
-
+// Logout link only shows up for logged in user...
+// Else, show Login and Register buttons
   authLinks = () => {
     if (Object.keys(this.props.user).length) {
        let links = [
@@ -57,7 +58,8 @@ class App extends React.Component {
       })
     }
   }
-
+// This is our nav bar and mobile nav below
+// the .authLinks only show when logged in, like Dashboard
   render() {
     return (
       <div>

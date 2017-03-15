@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { clearFlash } from '../actions/flash.js';
+// this is the log in error message that flashes....
 
 const fadeFlash = (dispatch) => {
   setTimeout( () => {
