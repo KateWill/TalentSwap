@@ -49,8 +49,8 @@ class App extends React.Component {
       return links;
     } else {
       return [
-        { name: 'Sign In', path: '/signin' },
-        { name: 'Sign Up', path: '/signup' },
+        { name: 'Login', path: '/signin' },
+        { name: 'Register', path: '/signup' },
       ].map( (link, i) => {
         let active = this.props.location.pathname === link.path ? 'active' : '';
         return this.link(i, link.name, link.path)
