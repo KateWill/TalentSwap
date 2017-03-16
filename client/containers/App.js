@@ -54,6 +54,7 @@ class App extends React.Component {
             >
               Profile
             </a>
+          
           </li>
         
         )
