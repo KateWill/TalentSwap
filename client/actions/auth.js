@@ -20,7 +20,7 @@ export const logout = (router) => {
       url: '/api/auth/sign_out',
       type: 'DELETE'
     }).done( () => {
-      router.push('/signin')
+      router.push('/login')
       dispatch(setUser())
     })
   }

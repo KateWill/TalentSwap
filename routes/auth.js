@@ -24,7 +24,7 @@ router.post('/signup', (req, res) => {
   });
 });
 
-router.post('/signin', (req, res) => {
+router.post('/login', (req, res) => {
  let { email, password } = req.body
  User.findOne({ username: req.body.email}, (err, user) => {
    if (!user)

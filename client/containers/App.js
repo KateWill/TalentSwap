@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { logout, refreshLogin } from '../actions/auth';
 import { connect } from 'react-redux';
 import Flash from '../components/Flash';
-
+import Profile from '../components/Profile';
 
 class App extends React.Component {
   componentDidMount() {
@@ -14,6 +14,7 @@ class App extends React.Component {
   links = () => {
     return [
       { name: 'Home', path: '/' },
+      { name: 'Profile', path: '/profile' }
     ].map( (link, i) => {
       return this.link(i, link.name, link.path)
     })
@@ -50,7 +51,7 @@ class App extends React.Component {
       return links;
     } else {
       return [
-        { name: 'Login', path: '/signin' },
+        { name: 'Login', path: '/login' },
         { name: 'Register', path: '/signup' },
       ].map( (link, i) => {
         let active = this.props.location.pathname === link.path ? 'active' : '';
@@ -79,7 +80,7 @@ class App extends React.Component {
         </nav>
         <Flash />
         {this.props.children}
-        <p> Header image with logo goes below!</p>
+
         <div className="row">
           <img className="col s12" src="images/mainimg1.jpg" />
         </div>
