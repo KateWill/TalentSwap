@@ -22,9 +22,10 @@ export default (
      <Route path="signup" component={Auth} title="Register" />
      <Route path="login" component={Auth} title="Login" />
      <Route component={AuthenticatedRoutes}>
+      <Route path="profile" component={Profile} />
          {/* PROTECTED BY AUTHENTICATION */}
        <Route component={AdminRoutes}>
-      <Route path="profile" component={Auth} title="Profile" />
+      
            {/* PROTECTED BY ADMIN ACCESS */}
        </Route>
      </Route>
