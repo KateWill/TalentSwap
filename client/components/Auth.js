@@ -31,6 +31,9 @@ class Auth extends React.Component {
             <button className="btn yellow darken-2">{this.props.route.title}</button>
           </form>
          </div>
+          <div className="row">
+          <img className="col s12" src="images/mainimg1.jpg" />
+        </div>
       </div>
     )
   }
