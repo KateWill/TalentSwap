@@ -46,6 +46,7 @@ class App extends React.Component {
             >
               Logout
             </a>
+          
           </li>
         )
       return links;
