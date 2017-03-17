@@ -28,8 +28,15 @@ class Auth extends React.Component {
             <form onSubmit={this.handleSubmit}>
               <input type="email" required={true} ref={ n => this.email = n } placeholder="email" />
               <input type="password" required={true} ref={n => this.password = n } placeholder="password" />
-            <button className="btn yellow darken-2">{this.props.route.title}</button>
+                  <center><h4>Enter your profile information here</h4></center>
+                    <input type="text" required={true} ref={ n => this.name = n}  placeholder="name" />
+                      <input type="text" required={true} ref={ n => this.name = n}  placeholder="location" />
+                        <input type="text" required={true} ref={ n => this.name = n} placeholder="skills" />
+                 
+                 
+            <button className="btn yellow darken-2">{this.props.route.title}</button> 
           </form>
+          <br />
          </div>
       </div>
     )
