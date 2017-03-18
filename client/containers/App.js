@@ -54,6 +54,7 @@ class App extends React.Component {
             >
               Profile
             </a>
+          
           </li>
         
         )
@@ -90,10 +91,6 @@ class App extends React.Component {
         </nav>
         <Flash />
         {this.props.children}
-
-        <div className="row">
-          <img className="col s12" src="images/mainimg1.jpg" />
-        </div>
       </div>
     );
   }

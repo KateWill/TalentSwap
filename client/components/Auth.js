@@ -38,6 +38,9 @@ class Auth extends React.Component {
           </form>
           <br />
          </div>
+          <div className="row">
+          <img className="col s12" src="images/mainimg1.jpg" />
+        </div>
       </div>
     )
   }

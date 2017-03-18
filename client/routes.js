@@ -6,6 +6,7 @@ import AuthenticatedRoutes from './components/AuthenticatedRoutes';
 import Auth from './components/Auth';
 import NotFound from './components/NotFound';
 import Profile from './components/Profile';
+import Search from './components/Search';
 
 const AdminAccess = UserAuthWrapper({
   authSelector: state => state.user,
@@ -23,6 +24,7 @@ export default (
      <Route path="login" component={Auth} title="Login" />
      <Route component={AuthenticatedRoutes}>
       <Route path="profile" component={Profile} />
+      <Route path="search" component={Search} />
          {/* PROTECTED BY AUTHENTICATION */}
        <Route component={AdminRoutes}>
       
