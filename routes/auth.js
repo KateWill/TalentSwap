@@ -42,6 +42,7 @@ router.post('/login', (req, res) => {
   });
 });
 
+})
 router.get('/user', isAuthenticated, (req,res) => {
   return res.json(req.user)
 });
