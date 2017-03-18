@@ -29,8 +29,8 @@ class Auth extends React.Component {
               <input type="email" required={true} ref={ n => this.email = n } placeholder="email" />
               <input type="password" required={true} ref={n => this.password = n } placeholder="password" />
                   <center><h4>Enter your profile information here</h4></center>
-                    <input type="text" required={true} ref={ n => this.name = n}  placeholder="name" />
-                      <input type="text" required={true} ref={ n => this.name = n}  placeholder="location" />
+                    <input type="text" required={true} ref={ n => this.name = n}  placeholder="username" />
+                      <input type="text" required={true} ref={ n => this.name = n}  placeholder="zip code" />
                         <input type="text" required={true} ref={ n => this.name = n} placeholder="skills" />
                  
                  
