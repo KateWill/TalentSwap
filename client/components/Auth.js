@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { refreshLogin } from '../actions/auth';
 import { setFlash } from '../actions/flash';
+
 // this is the login component
 class Auth extends React.Component {
   handleSubmit = (e) => {
@@ -14,7 +15,7 @@ class Auth extends React.Component {
       data: { email: email.value, password: password.value }
     }).done( user => {
       dispatch(refreshLogin(user));
-      router.push("/")
+      router.push("/search")
     }).fail( err => {
       dispatch(setFlash(err.responseJSON.message, 'error'))
     });
