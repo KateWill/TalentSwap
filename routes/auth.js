@@ -42,7 +42,10 @@ router.post('/login', (req, res) => {
   });
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f2b1f374764df528a54c4e0aa9cf71caae1157e3
 router.get('/user', isAuthenticated, (req,res) => {
   return res.json(req.user)
 });
