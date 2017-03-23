@@ -9,4 +9,4 @@ const flash = ( state = {}, action ) => {
    }
 }
 
-export default flash
+export default flash;

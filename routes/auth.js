@@ -10,10 +10,12 @@ const isAuthenticated = (req, res, next) => {
      return res.json({ })
 }
 
-router.post('/signup', (req, res) => {
-  let { email, password } = req.body;
+router.post('/register', (req, res) => {
+  let { email, password , username , talent ,zipcode } = req.body;
+  console.log(password);
   User.register(new User({username: email}), password, (err, user) => {
     if (err)
+    console.log(err)
       return res.status(500).json(err);
 
     user.save( (err, user) => {
@@ -26,7 +28,7 @@ router.post('/signup', (req, res) => {
 
 router.post('/login', (req, res) => {
  let { email, password } = req.body
- User.findOne({ username: req.body.email}, (err, user) => {
+ User.findOne({ email: req.body.email}, (err, user) => {
    if (!user)
      return res.status(500).json({ message: 'Invalid Username Or Password' });
    user.authenticate(req.body.password, (err, user, passwordErr) => {
@@ -42,10 +44,6 @@ router.post('/login', (req, res) => {
   });
 });
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f2b1f374764df528a54c4e0aa9cf71caae1157e3
 router.get('/user', isAuthenticated, (req,res) => {
   return res.json(req.user)
 });

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { logout, refreshLogin } from '../actions/auth';
+import { logout, refreshLogin } from '../actions/register';
 import { connect } from 'react-redux';
 import Flash from '../components/Flash';
-import Profile from '../components/Profile';
+import Profiles from '../components/Profiles';
 
 class App extends React.Component {
   componentDidMount() {
@@ -48,9 +48,9 @@ class App extends React.Component {
                 Logout
               </a>
             </li>, 
-            <li key='profile'>
+            <li key='profiles'>
             <a
-              href="/profile"
+              href="/profiles"
             >
               Profile
             </a>
@@ -63,7 +63,7 @@ class App extends React.Component {
     } else {
       return [
         { name: 'Login', path: '/login' },
-        { name: 'Register', path: '/signup' },
+        { name: 'Register', path: '/register' },
       ].map( (link, i) => {
         let active = this.props.location.pathname === link.path ? 'active' : '';
         return this.link(i, link.name, link.path)

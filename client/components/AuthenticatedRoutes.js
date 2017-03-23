@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { refreshLogin } from '../actions/auth';
+import { refreshLogin } from '../actions/register';
 
 const AuthenticatedRoutes = ({ user, children }) => (
   <div>

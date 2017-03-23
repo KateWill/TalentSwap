@@ -1,21 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { refreshLogin } from '../actions/auth';
+import { refreshLogin } from '../actions/register';
 import { setFlash } from '../actions/flash';
 
 // this is the login component
-class Auth extends React.Component {
+class Login extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     let { email, password, props: { location, dispatch, router }} = this;
 
     $.ajax({
-      url: `/api/auth/${location.pathname}`,
+      url: `/api/register/${location.pathname}`,
       type: 'POST',
       data: { email: email.value, password: password.value }
     }).done( user => {
       dispatch(refreshLogin(user));
-      router.push("/search")
+      router.push("/Profiles")
     }).fail( err => {
       dispatch(setFlash(err.responseJSON.message, 'error'))
     });
@@ -29,10 +29,7 @@ class Auth extends React.Component {
             <form onSubmit={this.handleSubmit}>
               <input type="email" required={true} ref={ n => this.email = n } placeholder="email" />
               <input type="password" required={true} ref={n => this.password = n } placeholder="password" />
-                  <center><h4>Enter your profile information here</h4></center>
-                    <input type="text" required={true} ref={ n => this.name = n}  placeholder="username" />
-                      <input type="text" required={true} ref={ n => this.name = n}  placeholder="zip code" />
-                        <input type="text" required={true} ref={ n => this.name = n} placeholder="skills" />
+                
                  
                  
             <button className="btn yellow darken-2">{this.props.route.title}</button> 
@@ -47,4 +44,4 @@ class Auth extends React.Component {
   }
 }
 
-export default connect()(Auth);
+export default connect()(Login);

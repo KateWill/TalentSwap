@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const mongoose = require('mongoose');
-const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/capstone-starter'
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/talentswap'
 mongoose.connect(mongoUri);
 
 const index = require('./routes/index');
