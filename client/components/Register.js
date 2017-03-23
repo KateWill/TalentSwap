@@ -14,7 +14,7 @@ class Register extends React.Component {
     let talent = this.talent.value;
     let dispatch = this.props.dispatch;
     let router = this.props.router;
-  console.log(username,email,password,zipcode,talent);
+ 
     $.ajax({
       url: `/api/auth/register`,
       type: 'POST',
