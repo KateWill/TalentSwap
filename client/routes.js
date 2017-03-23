@@ -7,7 +7,9 @@ import Register from './components/Register';
 import NotFound from './components/NotFound';
 import Profile from './components/Profile';
 import Profiles from './components/Profiles';
+import MyProfile from './components/MyProfile';
 import Login from './components/Login';
+import Home from './components/Home';
 
 const AdminAccess = UserAuthWrapper({
   authSelector: state => state.user,
@@ -21,9 +23,11 @@ const AdminRoutes = AdminAccess( (props) => props.children )
 export default (
  <Route>
    <Route path="/" component={App}>
+     <IndexRoute component={Home} />
      <Route path="register" component={Register} title="Register" />
      <Route path="login" component={Login} title="Login" />
      <Route component={AuthenticatedRoutes}>
+      <Route path="myprofile" component={MyProfile} />
       <Route path="profile" component={Profile} />
       <Route path="profiles" component={Profiles} />
          {/* PROTECTED BY AUTHENTICATION */}

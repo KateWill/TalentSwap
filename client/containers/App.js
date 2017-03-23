@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import { logout, refreshLogin } from '../actions/register';
 import { connect } from 'react-redux';
 import Flash from '../components/Flash';
-import Profiles from '../components/Profiles';
 
 class App extends React.Component {
   componentDidMount() {
@@ -40,22 +39,24 @@ class App extends React.Component {
           
             <li key="logout">
               <a
-                href="#"
+                href="/"
                 onClick={ e => {
                   this.props.dispatch(logout(this.props.router))
                 }}
               >
                 Logout
               </a>
-            </li>, 
-            <li key='profiles'>
-            <a
-              href="/profiles"
-            >
-              Profile
-            </a>
-          
-          </li>
+            </li>,
+            <li key="myprofile">
+              <a
+                href="/myprofile"
+                onClick={ e => {
+                  this.props.dispatch(MyProfile(this.props.router))
+                }}
+              >
+                My Profile
+              </a>
+            </li> 
          
         )
 

@@ -10,7 +10,7 @@ class Login extends React.Component {
     let { email, password, props: { location, dispatch, router }} = this;
 
     $.ajax({
-      url: `/api/register/${location.pathname}`,
+      url: `/api/auth/login`,
       type: 'POST',
       data: { email: email.value, password: password.value }
     }).done( user => {
@@ -24,21 +24,15 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-        <h2 className="center">{this.props.route.title}</h2>
+        <center><h1>Welcome Back!</h1></center>
+        <h3 className="center">{this.props.route.title}</h3>
           <div className="container">
             <form onSubmit={this.handleSubmit}>
               <input type="email" required={true} ref={ n => this.email = n } placeholder="email" />
-              <input type="password" required={true} ref={n => this.password = n } placeholder="password" />
-                
-                 
-                 
-            <button className="btn yellow darken-2">{this.props.route.title}</button> 
-          </form>
-          <br />
+              <input type="password" required={true} ref={n => this.password = n } placeholder="password" /> <br/>      
+              <button className="btn yellow darken-2">{this.props.route.title}</button> 
+            </form>
          </div>
-          <div className="row">
-          <img className="col s12" src="images/mainimg1.jpg" />
-        </div>
       </div>
     )
   }
