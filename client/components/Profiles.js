@@ -55,7 +55,6 @@ class Profiles extends React.Component {
         <div className="container">
           <center><h1>Search Profiles </h1></center>
           <div className="row">
-            <div className="container">
             <center>
               <form onSubmit={this.handleSubmit}>
                 <input type="Talent" ref={ n => this.talent = n } placeholder="Talent" /><br/><br/>
@@ -66,13 +65,9 @@ class Profiles extends React.Component {
                 <p>THIS WILL BE THE MATCHED PROFILE </p>
               </div>
             </center>
-            <div className="row">
+            <div>
               <h4>All: </h4>
-              
-                {users}
-              
-            </div>
-            
+                {users}     
             </div>  
           </div>
         </div>
