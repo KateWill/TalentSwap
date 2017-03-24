@@ -3,9 +3,7 @@ import { connect } from 'react-redux';
 import { refreshLogin } from '../actions/register';
 import { setFlash } from '../actions/flash';
 
-
-
-// this is the login component
+// this is the register component
 class Register extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +29,7 @@ class Register extends React.Component {
 
   render() {
     return (
-      <div className="indigo lighten-5"> 
+      <div className="reg indigo lighten-5"> 
         <div className="container">
          <div className="row">
           <div className="col m5 pull-m1">

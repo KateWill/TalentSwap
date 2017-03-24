@@ -28,8 +28,8 @@ export default (
      <Route path="login" component={Login} title="Login" />
      <Route component={AuthenticatedRoutes}>
       <Route path="myprofile" component={MyProfile} />
-      <Route path="profile" component={Profile} />
       <Route path="profiles" component={Profiles} />
+      <Route path="profile" component={Profile} />
          {/* PROTECTED BY AUTHENTICATION */}
        <Route component={AdminRoutes}>
       

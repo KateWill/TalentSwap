@@ -1,16 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-const Profile = () => (
-  <div className="container">
- 
-    <h2>This is an individual Profile</h2>
-    <ul>
-      <li>ScreenName:</li>
-      <li>Talent:</li>
-    </ul>
-  
-  </div>
+const Profile = ({username,zipcode,talent}) => (
+  <ul>
+      <li>Username: {username}</li> 
+      <li>Zipcode: {zipcode}</li>
+      <li>Talent: {talent}</li>
+  </ul>
 )
 
-export default connect() (Profile);
+export default Profile;

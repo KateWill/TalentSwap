@@ -52,5 +52,11 @@ router.delete('/sign_out', (req, res) => {
   res.status(200).json({});
 });
 
+router.get('/', isAuthenticated, (req,res) => {
+  User.find({}, (err, users) =>{
+    res.json(users)
+  })
+});
+
 
 module.exports = router;
