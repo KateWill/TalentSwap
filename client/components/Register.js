@@ -34,10 +34,10 @@ class Register extends React.Component {
          <div className="row">
           <div className="col m5 pull-m1">
             <h3>Swap Talents With People In Your Area</h3>
-            <ul>
-              <li><i className="large material-icons">search</i> Explore New Talents</li>
-              <li><i className="large material-icons">mode_edit</i> Customize Your Interests & Experience</li>
-              <li><i className="large material-icons">person_pin</i> Connect With People In Your Area</li>    
+            <ul style={{paddingTop:"15px"}}>
+              <li style={{fontSize:"25px"}}><i className="medium material-icons">search</i> Explore New Talents</li><br/>
+              <li style={{fontSize:"18px"}}><i className="medium material-icons">mode_edit</i> Customize Your Interests & Experience</li><br/>
+              <li style={{fontSize:"20px"}}><i className="medium material-icons">person_pin</i> Connect With People In Your Area</li>    
             </ul>
           </div>
         
