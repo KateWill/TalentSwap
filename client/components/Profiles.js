@@ -54,25 +54,31 @@ class Profiles extends React.Component {
       <div>
         <div className="container">
           
-          <center><h1>Search Profiles </h1></center>
+          <center><h1>Search Profiles </h1>
+          <p><i> Or If you're feeling adventurous click "Explore" for a randomized profile</i></p></center>
           <div className="row">
             <center>
               <form onSubmit={this.handleSubmit}>
                 <i className="small material-icons">search</i>
                 <input style={{width:"350px", fontSize:"20px", height: "35px"}} type="Talent" ref={ n => this.talent = n } placeholder=" Talent " /><br/><br/>
-                <button style={{width:"300px", fontSize:"20px", height: "50px"}} className="btn yellow darken-2"name="uprofile">Search</button> 
+                <button style={{fontSize:"20px", height: "50px", marginRight: "20px"}} className="btn yellow darken-2"name="uprofile">Search</button> 
+                <button style={{fontSize:"20px", height: "50px"}} className="btn yellow darken-2"name="uprofile">Explore</button>
               </form>
             </center>
 
               <br/>
               <div>
-                <h3>Search Result...</h3>
+                <h3>Featured Search Result...</h3>
+                <p>This is will be the top result? And the other matches will be underneath?</p>
                 <div className="card indigo lighten-4">
                   <div className="card-content">
                     <span className="card-title">Talent: </span>
                     <p>
                       Username: <br/>
-                      Zipcode: <br/>
+                      Zipcode: <br/><br/>
+
+                      <button className="btn yellow darken-2"name="uprofile">Contact</button>
+
                     </p>
                   </div>
               
