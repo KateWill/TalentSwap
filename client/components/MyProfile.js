@@ -8,10 +8,17 @@ class MyProfile extends React.Component {
     return(
       <div>
         <center><h1>MY PROFILE</h1></center>
-      
-        </div>
+        <p>
+          You are logged in as: {this.props.username}<br/>
+          Your talent is: {this.props.talent}<br/>
+          Your zipcode is: {this.props.zipcode}<br/>
+        </p>
+      </div>
     )
   }
 }
+const mapStateToProps = (state) => {
+ return { username: state.user.username, talent: state.user.talent, zipcode: state.user.zipcode}
+}
 
-export default connect()(MyProfile);
+export default connect(mapStateToProps)(MyProfile);

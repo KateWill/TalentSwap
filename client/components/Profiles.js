@@ -53,14 +53,6 @@ class Profiles extends React.Component {
     return(
       <div>
         <div className="container">
-          <p>
-          You are logged in as: {this.props.username}<br/>
-          Your talent is: {this.props.talent}<br/>
-          Your zipcode is: {this.props.zipcode}<br/>
-          </p>
-          <div>
-            All: {users}
-          </div>
           <center><h1>Search Profiles </h1></center>
           <div className="row">
             <div className="container">
@@ -69,8 +61,18 @@ class Profiles extends React.Component {
                 <input type="Talent" ref={ n => this.talent = n } placeholder="Talent" /><br/><br/>
                 <button className="btn yellow darken-2"name="uprofile">Search</button> 
               </form>
-              
+              <br/>
+              <div>
+                <p>THIS WILL BE THE MATCHED PROFILE </p>
+              </div>
             </center>
+            <div className="row">
+              <h4>All: </h4>
+              
+                {users}
+              
+            </div>
+            
             </div>  
           </div>
         </div>
@@ -80,8 +82,4 @@ class Profiles extends React.Component {
   
 }
 
-const mapStateToProps = (state) => {
- return { username: state.user.username, talent: state.user.talent, zipcode: state.user.zipcode}
-}
-
-export default connect(mapStateToProps)(Profiles);
+export default connect()(Profiles);

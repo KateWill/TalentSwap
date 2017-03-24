@@ -1,11 +1,14 @@
 import React from 'react';
 
 const Profile = ({username,zipcode,talent}) => (
-  <ul>
-      <li>Username: {username}</li> 
-      <li>Zipcode: {zipcode}</li>
-      <li>Talent: {talent}</li>
-  </ul>
+  <div>
+    <div className="col s4">
+      Username: {username}<br/>
+      Zipcode: {zipcode}<br/>
+      Talent: {talent}<br/><br/>
+      </div>
+    </div>
+  
 )
 
 export default Profile;
