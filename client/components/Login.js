@@ -23,7 +23,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{paddingBottom:"100px"}}>
         <center><h1>Welcome Back!</h1></center>
         <h3 className="center">{this.props.route.title}</h3>
           <div className="container">

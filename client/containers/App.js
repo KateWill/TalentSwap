@@ -92,7 +92,33 @@ class App extends React.Component {
         </nav>
         <Flash />
         {this.props.children}
+         <footer className="page-footer indigo lighten-2">
+          <div className="container">
+            <div className="row">
+              <div className="col l6 s12">
+                <h5 className="white-text">Talent Swap</h5>
+                <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div className="col l4 offset-l2 s12">
+                <h5 className="white-text">Explore</h5>
+                <ul>
+                  <li><a className="grey-text text-lighten-3" href="#!">Home</a></li>
+                  <li><a className="grey-text text-lighten-3" href="#!">Login</a></li>
+                  <li><a className="grey-text text-lighten-3" href="#!">Register</a></li>
+                  <li><a className="grey-text text-lighten-3" href="#!">Watch Demo</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="footer-copyright">
+            <div className="container">
+            © 2017 Talent Swap Co.
+            <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer> 
       </div>
+      
     );
   }
 }
