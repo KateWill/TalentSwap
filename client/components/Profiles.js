@@ -53,20 +53,39 @@ class Profiles extends React.Component {
     return(
       <div>
         <div className="container">
+          
           <center><h1>Search Profiles </h1></center>
           <div className="row">
             <center>
               <form onSubmit={this.handleSubmit}>
-                <input type="Talent" ref={ n => this.talent = n } placeholder="Talent" /><br/><br/>
-                <button className="btn yellow darken-2"name="uprofile">Search</button> 
+                <i className="small material-icons">search</i>
+                <input style={{width:"350px", fontSize:"20px", height: "35px"}} type="Talent" ref={ n => this.talent = n } placeholder=" Talent " /><br/><br/>
+                <button style={{width:"300px", fontSize:"20px", height: "50px"}} className="btn yellow darken-2"name="uprofile">Search</button> 
               </form>
+            </center>
+
               <br/>
               <div>
-                <p>THIS WILL BE THE MATCHED PROFILE </p>
-              </div>
-            </center>
+                <h3>Search Result...</h3>
+                <div className="card indigo lighten-4">
+                  <div className="card-content">
+                    <span className="card-title">Talent: </span>
+                    <p>
+                      Username: <br/>
+                      Zipcode: <br/>
+                    </p>
+                  </div>
+              
+                <center> <div className="card-action indigo lighten-2">
+                <a href="#"><i className="tiny material-icons">stars</i> Save</a>
+                <a href="#"><i className="tiny material-icons">thumb_up</i> Like</a>
+                <a href="#"><i className="tiny material-icons">thumb_down</i> Hide</a>
+                </div></center>
+            </div>
+          </div>
+            
             <div>
-              <h4>All: </h4>
+              <h4>All Profiles: </h4>
                 {users}     
             </div>  
           </div>
