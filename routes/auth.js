@@ -59,4 +59,10 @@ router.get('/', isAuthenticated, (req,res) => {
 });
 
 
+router.get('/:talent', (req,res) =>{
+  User.find({ talent: req.params.talent }, (err,user)=>{
+    return res.json(user)
+  })
+})
+
 module.exports = router;
