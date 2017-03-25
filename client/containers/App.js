@@ -51,7 +51,12 @@ class App extends React.Component {
               <Link to="/myprofile">
                 My Profile
               </Link>
-            </li> 
+            </li>,
+            <li key="profiles">
+              <Link to="/profiles">
+                Search
+              </Link>
+            </li>  
          
         )
 
