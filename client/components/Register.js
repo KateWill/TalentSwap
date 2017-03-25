@@ -51,8 +51,8 @@ class Register extends React.Component {
                     <input type="text" required={true} ref={ n => this.screenname = n}  placeholder="Choose a Screenname" />
                     <input type="text" required={true} ref={ n => this.zipcode = n }  placeholder="Your Zip Code" />
                     <input type="text" required={true} ref={ n => this.talent = n } placeholder="Your Talent for Trade" />
-                    <input type="text area" required={true} ref={ n => this.bio =n } placeholder="Describe your talen background" />    
-            <button className="btn yellow darken-2">{this.props.route.title}</button> 
+                    <textarea style={{height:"200px", width: "500px"}} required={true} ref={ n => this.bio = n } placeholder="Describe your talent background" />  <br/>  
+            <button style={{marginTop:"15px"}} className="btn yellow darken-2">{this.props.route.title}</button> 
           </form>
          </div> 
         </div>

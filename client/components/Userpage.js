@@ -18,4 +18,4 @@ const mapStateToProps = (state) => {
  return ("Hello")
 }
 
-export default connect(mapStateToProps)(Userpage);
+export default connect()(Userpage);
