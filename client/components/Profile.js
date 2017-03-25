@@ -19,7 +19,7 @@ const Profile = ({username,zipcode,talent}) => (
             Zipcode: {zipcode}<br/>
         </p>
         <div className="card-action">
-            <a href="#"><i className="tiny material-icons"></i> Comment</a>
+            <a href="#"><i className="tiny material-icons">thumb up</i> Like</a>
             <Link to="/userpage"><i className="tiny material-icons">visibility</i> View</Link>
         </div>
 

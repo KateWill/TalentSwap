@@ -10,6 +10,7 @@ import Profiles from './components/Profiles';
 import MyProfile from './components/MyProfile';
 import Login from './components/Login';
 import Home from './components/Home';
+import Userpage from './components/Userpage';
 
 const AdminAccess = UserAuthWrapper({
   authSelector: state => state.user,
@@ -30,6 +31,7 @@ export default (
       <Route path="myprofile" component={MyProfile} />
       <Route path="profiles" component={Profiles} />
       <Route path="profile" component={Profile} />
+      <Route path="userpage" component={Userpage} />
          {/* PROTECTED BY AUTHENTICATION */}
        <Route component={AdminRoutes}>
       
