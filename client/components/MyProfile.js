@@ -14,7 +14,9 @@ class MyProfile extends React.Component {
             <img className="activator" src="images/mainimg1.jpg" />
           </div>
           <div className="card-content">
-            <span className="card-title activator grey-text text-darken-4">Talent: {this.props.talent}<i className="material-icons right">more_vert</i></span>
+            <p>Screen Name: {this.props.screenname} <br/></p>
+            <span className="card-title activator grey-text text-darken-4">
+            Talent: {this.props.talent}<i className="material-icons right">more_vert</i></span>
           </div>
           <div className="card-reveal">
             <span className="card-title grey-text text-darken-4">Talent: {this.props.talent}<i className="material-icons right">close</i></span>
