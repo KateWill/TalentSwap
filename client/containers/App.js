@@ -48,14 +48,9 @@ class App extends React.Component {
               </a>
             </li>,
             <li key="myprofile">
-              <a
-                href="/myprofile"
-                onClick={ e => {
-                  this.props.dispatch(MyProfile(this.props.router))
-                }}
-              >
+              <Link to="/myprofile">
                 My Profile
-              </a>
+              </Link>
             </li> 
          
         )
