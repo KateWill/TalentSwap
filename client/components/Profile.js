@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Profile = ({username,zipcode,talent}) => (
+const Profile = ({username, zipcode, talent, screenname, bio}) => (
   <div>
     <div className="col s4">
       
@@ -14,8 +14,8 @@ const Profile = ({username,zipcode,talent}) => (
       <div className="card-reveal">
         <span className="card-title grey-text text-darken-4">Talent: {talent}<i className="material-icons right">close</i></span>
         <p>
-            Username: {username}<br/>
-            Zipcode: {zipcode}<br/>
+            Screen Name: {screenname}<br/>
+            Zip Code: {zipcode}<br/>
         </p>
         <div className="card-action">
             <a href="#"><i className="tiny material-icons">comment</i> Comment</a>

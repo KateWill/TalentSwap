@@ -19,8 +19,8 @@ class MyProfile extends React.Component {
           <div className="card-reveal">
             <span className="card-title grey-text text-darken-4">Talent: {this.props.talent}<i className="material-icons right">close</i></span>
             <p>
-                Username: {this.props.username}<br/>
-                Zipcode: {this.props.zipcode}<br/>
+                Screen Name: {this.props.screenname}<br/>
+                Zip Code: {this.props.zipcode}<br/>
             </p>
             <div className="card-action">
                 <a href="#"><i className="tiny material-icons">comment</i> Comment</a>
@@ -37,7 +37,7 @@ class MyProfile extends React.Component {
   }
 }
 const mapStateToProps = (state) => {
- return { username: state.user.username, talent: state.user.talent, zipcode: state.user.zipcode}
+ return { username: state.user.username, screenname: state.user.screenname, bio: state.user.bio, talent: state.user.talent, zipcode: state.user.zipcode}
 }
 
 export default connect(mapStateToProps)(MyProfile);

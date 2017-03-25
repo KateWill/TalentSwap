@@ -8,6 +8,8 @@ let User = new Schema({
   username: { type : String, required: true, unique : true, dropDups : true },
   talent: { type : String },
   zipcode: { type: String },
+  bio: { type: String },
+  screenname: { type: String },
   role: { type: String, default: 'user' }
 });
 

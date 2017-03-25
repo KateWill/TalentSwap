@@ -5,7 +5,7 @@ import { setFlash } from '../actions/flash';
 import Profile from './Profile'
 
 class Profiles extends React.Component {
-  state = { users: [], talent: '', username: '', zipcode:'' }
+  state = { users: [], talent: '', username: '',bio: '', screenname: '', zipcode:'' }
 
   componentDidMount(){
     $.ajax({
@@ -35,7 +35,7 @@ class Profiles extends React.Component {
       // data: { email, password, username, zipcode , talent }
     }).done( users => {
       this.setState({users})
-      let { username, zipcode, talent } = this.state.users[0]
+      let { username, zipcode, talent, bio, screenname } = this.state.users[0]
       this.setState({ username, zipcode , talent})
     }).fail( err => {
       dispatch(setFlash(err.responseJSON.message, 'error'))
@@ -81,7 +81,7 @@ class Profiles extends React.Component {
 }
 
 const mapStateToProps = (state) => {
- return { username: state.user.username, talent: state.user.talent, zipcode: state.user.zipcode}
+ return { username: state.user.username, screenname: state.user.screenname, bio: state.user.bio, talent: state.user.talent, zipcode: state.user.zipcode}
 }
 
 function matchDispatchToProps(dispatch){
