@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import {Link} from 'react-router';
 
-const Profile = ({username,zipcode,talent}) => (
+const Profile = ({username, zipcode, talent, userId}) => (
   <div>
     <div className="col s4">
       
@@ -20,7 +21,7 @@ const Profile = ({username,zipcode,talent}) => (
         </p>
         <div className="card-action">
             <a href="#"><i className="tiny material-icons">thumb_up</i> Like</a>
-            <Link to="/userpage"><i className="tiny material-icons">visibility</i> View</Link>
+            <Link to={`/userpage/${userId}`}><i className="tiny material-icons">visibility</i> View</Link>
         </div>
 
         </div>
@@ -31,4 +32,8 @@ const Profile = ({username,zipcode,talent}) => (
   
 )
 
-export default Profile;
+const mapStateToProps = (state) => {
+  return { userId: state.user._id }
+}
+
+export default connect(mapStateToProps)(Profile);

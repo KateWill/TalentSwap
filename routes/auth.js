@@ -10,6 +10,13 @@ const isAuthenticated = (req, res, next) => {
      return res.json({ })
 }
 
+router.get('/getuser/:id', (req,res) => {
+  User.findOne({ _id: req.params.id }, (err,user)=>{
+    return res.json(user)
+  })
+  console.log(req.params.id)
+});
+
 router.post('/register', (req, res) => {
   let { email, password , screenname, bio, talent, zipcode } = req.body;
 
@@ -59,10 +66,11 @@ router.get('/', isAuthenticated, (req,res) => {
 });
 
 
-router.get('/:talent', (req,res) =>{
+router.get('/:talent', (req,res) => {
   User.find({ talent: req.params.talent }, (err,user)=>{
     return res.json(user)
   })
 })
+
 
 module.exports = router;

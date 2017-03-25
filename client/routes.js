@@ -31,7 +31,7 @@ export default (
       <Route path="myprofile" component={MyProfile} />
       <Route path="profiles" component={Profiles} />
       <Route path="profile" component={Profile} />
-      <Route path="userpage" component={Userpage} />
+      <Route path="userpage/:id" component={Userpage} />
          {/* PROTECTED BY AUTHENTICATION */}
        <Route component={AdminRoutes}>
       
