@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router';
 
-const Profile = ({username, zipcode, talent, screenname, bio}) => (
+const Profile = ({username,zipcode,talent}) => (
   <div>
     <div className="col s4">
       
@@ -14,12 +15,12 @@ const Profile = ({username, zipcode, talent, screenname, bio}) => (
       <div className="card-reveal">
         <span className="card-title grey-text text-darken-4">Talent: {talent}<i className="material-icons right">close</i></span>
         <p>
-            Screen Name: {screenname}<br/>
-            Zip Code: {zipcode}<br/>
+            Username: {username}<br/>
+            Zipcode: {zipcode}<br/>
         </p>
         <div className="card-action">
-            <a href="#"><i className="tiny material-icons">comment</i> Comment</a>
-            <a href="#"><i className="tiny material-icons">thumb_up</i> Like</a>
+            <a href="#"><i className="tiny material-icons"></i> Comment</a>
+            <Link to="/userpage"><i className="tiny material-icons">visibility</i> View</Link>
         </div>
 
         </div>
