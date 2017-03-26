@@ -17,22 +17,34 @@ class Userpage extends React.Component {
   }
  
   render(){
-    console.log(this.state.user)
+    
     return(
-      
      <div>
-     <h1> Hello al;sdfkjas;dlj </h1>
-     <p>User Id: {this.state.user._id}</p>
-   
-
-     </div>
+      <center><h1>{this.state.user.screenname}'s Profile</h1></center>
+      <div className="row">
+        <div className="col s4 push-s2">
+          <img style={{width: "300px"}} className="activator" src="/images/mainimg1.jpg" />
+        </div>
+      
+      <div className="col s4 push-s2">
+        <p>
+          Talent: {this.state.user.talent}<br/>
+          Screen Name: {this.state.user.screenname} <br/>
+          Zipcode: {this.state.user.zipcode} <br/>
+        </p>
+      </div>
+      </div>
+    <center><div style={{border:"1px solid", width: "50%", marginBottom: "25px"}}>
+      <center><h2>Comment Section Will Go Here</h2></center>
+      <div className="row">
+        <div className="col s4 push-s4">
+        <p>Comment: This is a comment</p>
+        </div>
+      </div>
+    </div></center>
+    </div>
     )
   }
 }
-
-
-// const mapStateToProps = (state) => {
-//  return {user: state.user}
-// }
 
 export default connect()(Userpage);

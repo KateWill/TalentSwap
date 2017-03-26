@@ -100,12 +100,12 @@ class App extends React.Component {
                 <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
               </div>
               <div className="col l4 offset-l2 s12">
-                <h5 className="white-text">Explore</h5>
+                <h5 className="white-text">Menu</h5>
                 <ul>
-                  <li><a className="grey-text text-lighten-3" href="#!">Home</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Login</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Register</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Watch Demo</a></li>
+                  <li><a className="grey-text text-lighten-3" href="/">Home</a></li>
+                  <li><a className="grey-text text-lighten-3" href="/login">Login</a></li>
+                  <li><a className="grey-text text-lighten-3" href="/register">Register</a></li>
+                  <li><a className="grey-text text-lighten-3" href="/">About</a></li>
                 </ul>
               </div>
             </div>
