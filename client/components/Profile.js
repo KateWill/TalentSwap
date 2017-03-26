@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router';
 
-const Profile = ({username, zipcode, talent, userId}) => (
+const Profile = ({username, zipcode, talent, userId, screenname}) => (
   <div>
     <div className="col s4">
       
@@ -16,7 +16,7 @@ const Profile = ({username, zipcode, talent, userId}) => (
       <div className="card-reveal">
         <span className="card-title grey-text text-darken-4">Talent: {talent}<i className="material-icons right">close</i></span>
         <p>
-            Username: {username}<br/>
+            Screen Name: {screenname}<br/>
             Zipcode: {zipcode}<br/>
         </p>
         <div className="card-action">

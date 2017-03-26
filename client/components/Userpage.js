@@ -34,11 +34,11 @@ class Userpage extends React.Component {
         </p>
       </div>
       </div>
-    <center><div style={{border:"1px solid", width: "50%", marginBottom: "25px"}}>
+    <center><div style={{width: "50%", marginBottom: "25px"}}>
       <center><h2>Comment Section Will Go Here</h2></center>
       <div className="row">
         <div className="col s4 push-s4">
-        <p>Comment: This is a comment</p>
+        <p style={{border:"1px solid", padding:"25px"}}>Comment: This is a comment</p>
         </div>
       </div>
     </div></center>
