@@ -31,6 +31,7 @@ class Userpage extends React.Component {
           Talent: {this.state.user.talent}<br/>
           Screen Name: {this.state.user.screenname} <br/>
           Zipcode: {this.state.user.zipcode} <br/>
+          Talent Background: {this.state.user.bio} <br/>
         </p>
       </div>
       </div>
