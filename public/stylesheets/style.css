@@ -21,4 +21,6 @@ a {
   border-color: #ebccd1;
 }
 
-
+body {
+  font-weight:thin;
+}

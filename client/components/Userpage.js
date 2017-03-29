@@ -1,4 +1,5 @@
 import React from 'react';
+import Comments from './Comments';
 import { connect } from 'react-redux';
 
 
@@ -17,7 +18,7 @@ class Userpage extends React.Component {
   }
  
   render(){
-    
+  
     return(
      <div>
       <center><h1>{this.state.user.screenname}'s Profile</h1></center>
@@ -40,6 +41,7 @@ class Userpage extends React.Component {
       <div className="row">
         <div className="col s4 push-s4">
         <p style={{border:"1px solid", padding:"25px"}}>Comment: This is a comment</p>
+        
         </div>
       </div>
     </div></center>
