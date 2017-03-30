@@ -39,7 +39,7 @@ class MyProfile extends React.Component {
   }
 }
 const mapStateToProps = (state) => {
- return { username: state.user.username, screenname: state.user.screenname, bio: state.user.bio, talent: state.user.talent, zipcode: state.user.zipcode}
+ return { username: state.user.username, screenname: state.user.screenname, bio: state.user.bio, talent: state.user.talent, zipcode: state.user.zipcode, comments: state.user.comments}
 }
 
 export default connect(mapStateToProps)(MyProfile);

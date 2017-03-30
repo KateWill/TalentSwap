@@ -5,7 +5,9 @@ import { setFlash } from '../actions/flash';
 import Profile from './Profile'
 
 class Profiles extends React.Component {
-  state = { users: [], talent: '', username: '',bio: '', screenname: '', zipcode:'' }
+    constructor(props) {
+    super(props);
+    this.state = { users: [], searchedUsers: null, talent: '', username: '', bio: '', screenname: '', zipcode: '', searched: '' }}
 
   componentDidMount(){
     $.ajax({
@@ -19,16 +21,37 @@ class Profiles extends React.Component {
     });
   }
 
+  handleChange = (event) => {
+     console.log(event.target.value)
+     console.log(this.state.searched)
+    
+    let word = event.target.value
+    let users = this.state.users
+
+    if (word === '') {
+      this.setState({ searchedUsers: users, searched: word })
+    } else {
+    
+      let regex = new RegExp(word.toLowerCase()) 
+      
+      let searchedUsers = users.filter( (user) => {
+        if (regex.test(user.talent.toLowerCase())) {
+          return user;
+        }
+      })
+
+      this.setState({ searchedUsers, searched: word })
+    }
+  
+  }
+ 
   handleSubmit = (e) => {
     e.preventDefault();
-    // let email = this.email.value;
-    // let password = this.password.value;
-    // let screenname = this.screenname.value;
-    // let zipcode = this.zipcode.value;
-    let talent = this.talent.value;
-    // let dispatch = this.props.dispatch;
-    // let router = this.props.router;
- 
+   
+    let talent = this.talent.value.toLowerCase();
+    
+  
+    //This is the search function
     $.ajax({
       url: `/api/auth/${talent}`,
       type: 'GET',
@@ -36,14 +59,16 @@ class Profiles extends React.Component {
     }).done( users => {
       this.setState({users})
       let { username, zipcode, talent, bio, screenname } = this.state.users[0]
-      this.setState({ username, zipcode , talent})
+      this.setState({ username, zipcode , talent, bio, screenname})
     }).fail( err => {
       dispatch(setFlash(err.responseJSON.message, 'error'))
     });
   }
    
   render(){
-    let users = this.state.users.map( user => {
+    let { searchedUsers, users: initialUsers } = this.state;
+    let filteredUsers = searchedUsers || initialUsers;
+    let users = filteredUsers.map( user => {
       return(
         <Profile 
           key={user._id}
@@ -60,7 +85,7 @@ class Profiles extends React.Component {
             <center>
               <form onSubmit={this.handleSubmit}>
                 <i className="small material-icons">search</i>
-                <input style={{width:"350px", fontSize:"20px", height: "35px"}} type="Talent" ref={ n => this.talent = n } placeholder=" Talent " /><br/><br/>
+                <input style={{width:"350px", fontSize:"20px", height: "35px"}} type="Talent"  value={this.state.searched} onChange={this.handleChange} ref={ n => this.talent = n } placeholder=" Talent " /><br/><br/>
                 <button type="submit" style={{fontSize:"20px", height: "50px", marginRight: "20px"}} className="btn yellow darken-2"name="uprofile">Search</button>
               </form>
               
