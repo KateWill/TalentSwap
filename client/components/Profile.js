@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router';
 
-const Profile = ({username, zipcode, talent, _id, screenname}) => (
+const Profile = ({username, zipcode, talent, _id, screenname, likes}) => (
   <div>
     <div className="col s4">
       
@@ -20,7 +20,7 @@ const Profile = ({username, zipcode, talent, _id, screenname}) => (
             Zipcode: {zipcode}<br/>
         </p>
         <div className="card-action">
-            <a href="#"><i className="tiny material-icons">thumb_up</i> Like</a>
+            <a href="#"><i className="tiny material-icons">thumb_up</i> Like {likes} </a>
             <Link to={`/userpage/${_id}`}><i className="tiny material-icons">visibility</i> View</Link>
         </div>
 

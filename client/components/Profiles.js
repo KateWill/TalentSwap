@@ -22,9 +22,6 @@ class Profiles extends React.Component {
   }
 
   handleChange = (event) => {
-     console.log(event.target.value)
-     console.log(this.state.searched)
-    
     let word = event.target.value
     let users = this.state.users
 
@@ -50,12 +47,9 @@ class Profiles extends React.Component {
    
     let talent = this.talent.value.toLowerCase();
     
-  
-    //This is the search function
     $.ajax({
       url: `/api/auth/${talent}`,
       type: 'GET',
-      // data: { email, password, username, zipcode , talent }
     }).done( users => {
       this.setState({users})
       let { username, zipcode, talent, bio, screenname } = this.state.users[0]
