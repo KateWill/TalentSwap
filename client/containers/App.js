@@ -79,7 +79,7 @@ class App extends React.Component {
         <nav>
           
           <div className="nav-wrapper #4db6ac teal lighten-2">
-            <a href="/" className="brand-logo">Talent Swap</a>
+            <a href="/" className="brand-logo"style={{fontWeight:"200"}}>Talent Swap</a>
             <a href="/" data-activates="mobile" className="button-collapse"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-med-and-down">
               { this.links() }

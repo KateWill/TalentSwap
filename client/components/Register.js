@@ -30,7 +30,7 @@ class Register extends React.Component {
 
   render() {
     return (
-      <div className="reg indigo lighten-5" style={{paddingBottom:"50px", paddingTop: "50px"}}> 
+      <div className="reg #F5F5DC lighten-5" style={{paddingBottom:"50px", paddingTop: "50px"}}> 
         <div className="container">
          <div className="row">
           <div className="col m5 pull-m1">
