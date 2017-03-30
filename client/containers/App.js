@@ -77,8 +77,9 @@ class App extends React.Component {
     return (
       <div>
         <nav>
-          <div className="nav-wrapper #7986cb indigo lighten-2">
-            <a href="/" className="brand-logo">Talent Swap</a>
+          
+          <div className="nav-wrapper #4db6ac teal lighten-2">
+            <a href="/" className="brand-logo"style={{fontWeight:"200"}}>Talent Swap</a>
             <a href="/" data-activates="mobile" className="button-collapse"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-med-and-down">
               { this.links() }
@@ -92,12 +93,12 @@ class App extends React.Component {
         </nav>
         <Flash />
         {this.props.children}
-         <footer className="page-footer indigo lighten-2">
+         <footer className="page-footer #4db6ac teal lighten-2">
           <div className="container">
             <div className="row">
               <div className="col l6 s12">
                 <h5 className="white-text">Talent Swap</h5>
-                <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <p className="grey-text text-lighten-4">Use at own risk.Talent Swap is not liable for any negative interactions that may occur.</p>
               </div>
               <div className="col l4 offset-l2 s12">
                 <h5 className="white-text">Menu</h5>
@@ -113,7 +114,7 @@ class App extends React.Component {
           <div className="footer-copyright">
             <div className="container">
             © 2017 Talent Swap Co.
-            <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
+          
             </div>
           </div>
         </footer> 

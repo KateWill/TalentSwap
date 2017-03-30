@@ -27,7 +27,7 @@ class Userpage extends React.Component {
     //comment.reset();
   }
   render(){
-    
+  
     return(
      <div>
       <center><h1>{this.state.user.screenname}'s Profile</h1></center>
@@ -47,6 +47,7 @@ class Userpage extends React.Component {
       </div>
     
       <div className="row">
+
         <div className="col s4 push-s2">
         <form onSubmit={this.logComments}>
           <h3>Leave a comment</h3>
@@ -61,6 +62,7 @@ class Userpage extends React.Component {
               <Comments />
             </ul>
           </div>
+       
         </div>
       </div>
    
