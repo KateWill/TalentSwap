@@ -10,7 +10,7 @@ class Home extends React.Component {
         <center><h1>Welcome To Talent Swap!</h1></center>
          <div className="row">
           <img className="col s12" src="images/mainimg1.jpg" />
-        </div>
+         </div>
         </div>
     )
   }
