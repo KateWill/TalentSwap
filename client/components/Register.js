@@ -30,7 +30,7 @@ class Register extends React.Component {
 
   render() {
     return (
-      <div className="reg #F5F5DC lighten-5" style={{paddingBottom:"50px", paddingTop: "50px"}}> 
+      <div className="reg grey lighten-5" style={{paddingBottom:"50px", paddingTop: "50px"}}> 
         <div className="container">
          <div className="row">
           <div className="col m5 pull-m1">
@@ -47,7 +47,7 @@ class Register extends React.Component {
             <form onSubmit={this.handleSubmit}>
               <input type="email" required={true} ref={ n => this.email = n } placeholder="Your Email" />
               <input type="password" required={true} ref={n => this.password = n } placeholder="Set Password" />
-                  <center><h4>Enter your profile information here</h4></center>
+                  <center><h5>Enter your profile information here</h5></center>
                     <input type="text" required={true} ref={ n => this.screenname = n}  placeholder="Choose a Screenname" />
                     <input type="text" required={true} ref={ n => this.zipcode = n }  placeholder="Your Zip Code" />
                     <input type="text" required={true} ref={ n => this.talent = n } placeholder="Your Talent for Trade" />
