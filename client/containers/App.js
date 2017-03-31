@@ -105,9 +105,7 @@ class App extends React.Component {
                 <h5 className="white-text">Menu</h5>
                 <ul>
                   <li><a className="grey-text text-lighten-3" href="/">Home</a></li>
-                  <li><a className="grey-text text-lighten-3" href="/login">Login</a></li>
-                  <li><a className="grey-text text-lighten-3" href="/register">Register</a></li>
-                  <li><a className="grey-text text-lighten-3" href="/">About</a></li>
+                  <li><a className="grey-text text-lighten-3" href="/about">About</a></li>
                 </ul>
               </div>
             </div>

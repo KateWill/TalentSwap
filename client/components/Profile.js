@@ -27,7 +27,7 @@ const Profile = ({username, zipcode, talent, _id, screenname, likes}) => (
             Zipcode: {zipcode}<br/>
         </p>
         <div className="card-action">
-            <a onClick={addLike} href="#"><i className="tiny material-icons">thumb_up</i> Like {likes} </a>
+            <a onClick={addLike} href="#"><i className="tiny material-icons">thumb_up</i> Like 0 </a>
             <Link to={`/userpage/${_id}`}><i className="tiny material-icons">visibility</i> View</Link>
         </div>
 
