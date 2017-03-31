@@ -19,7 +19,7 @@ class Home extends React.Component {
     return (
       <div className="row">
        
-        <img style={inlineStyle.img} c src="images/mainimg2.png"/>
+        <img style={inlineStyle.img} src="images/mainimg2.png"/>
           <h1 style={inlineStyle.h1}>Talent Swap</h1>
           
            <h5 style={inlineStyle.h5}>Connect with others <br/> and get to <i style={{color:"#4db6ac"}}>swapping</i>
