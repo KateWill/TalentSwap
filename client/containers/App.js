@@ -65,7 +65,7 @@ class App extends React.Component {
       return [
         { name: 'Login', path: '/login' },
         { name: 'Register', path: '/register' },
-        { name: 'About', path: '/about' }
+         { name: 'About', path: '/about' },
       ].map( (link, i) => {
         let active = this.props.location.pathname === link.path ? 'active' : '';
         return this.link(i, link.name, link.path)
@@ -107,7 +107,7 @@ class App extends React.Component {
                   <li><a className="grey-text text-lighten-3" href="/">Home</a></li>
                   <li><a className="grey-text text-lighten-3" href="/login">Login</a></li>
                   <li><a className="grey-text text-lighten-3" href="/register">Register</a></li>
-                  <li><a className="grey-text text-lighten-3" href="/">About</a></li>
+                  <li><a className="grey-text text-lighten-3" href="/about">About</a></li>
                 </ul>
               </div>
             </div>

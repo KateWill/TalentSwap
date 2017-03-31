@@ -11,7 +11,7 @@ import MyProfile from './components/MyProfile';
 import Login from './components/Login';
 import Home from './components/Home';
 import Userpage from './components/Userpage';
-
+import About from './components/About';
 const AdminAccess = UserAuthWrapper({
   authSelector: state => state.user,
   predicate: user => { return user.role === 'admin' },
@@ -27,6 +27,7 @@ export default (
      <IndexRoute component={Home} />
      <Route path="register" component={Register} title="Register" />
      <Route path="login" component={Login} title="Login" />
+     <Route path="about" component={About} title="About" />
      <Route component={AuthenticatedRoutes}>
       <Route path="myprofile" component={MyProfile} />
       <Route path="profiles" component={Profiles} />
