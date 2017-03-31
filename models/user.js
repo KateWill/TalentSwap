@@ -10,7 +10,9 @@ let User = new Schema({
   zipcode: { type: String },
   bio: { type: String },
   screenname: { type: String },
-  role: { type: String, default: 'user' }
+  role: { type: String, default: 'user' },
+  comment: [{type: String}],
+  likes: {type: Number}
 });
 
 User.plugin(passportLocalMongoose);

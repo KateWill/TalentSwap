@@ -18,13 +18,23 @@ class Userpage extends React.Component {
     });
   }
 
-  logComments= (e) =>{
+  logComments = (e) =>{
     e.preventDefault();
     let {refs: {comment}, form } = this;
     console.log (`${comment.value}`);
     this.comment = `${comment.value}`;
     console.log(this.comment);
     //comment.reset();
+    //  $.ajax({
+    //   url: `/api/auth/comment`,
+    //   type: 'POST',
+    //   data: { email, screenname, bio,  zipcode,  talent, comment }
+    // }).done( user => {
+    //   dispatch(refreshLogin(user));
+    //   //router.push("/profiles")
+    // }).fail( err => {
+    //   dispatch(setFlash(err.responseJSON.message, 'error'))
+    // });
   }
   render(){
   

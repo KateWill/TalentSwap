@@ -31,6 +31,20 @@ router.post('/register', (req, res) => {
   });
 });
 
+// router.put('/comment', (req, res) => {
+//   let { email, screenname, bio, talent, zipcode, comment } = req.body;
+
+//   User.register({username: email, talent, zipcode, screenname, bio}), password, (err, user) => {
+//     if (err)
+//       return res.status(500).json(err);
+//     user.save( (err, user) => {
+//       if (err)
+//         return res.status(500).json(err);
+//       return res.json(user)
+//     });
+//   });
+// });
+
 router.post('/login', (req, res) => {
  let { email, password } = req.body
 

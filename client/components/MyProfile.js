@@ -7,11 +7,29 @@ class MyProfile extends React.Component {
 
     return(
       <div className="row">
-        <center><h1>MY PROFILE</h1></center>
-    <div className="col s4 push-s4">
+          <div className="col s4 push-s3">
+            <h3> My Profile </h3>
+            
+              <img style={{width: "200px"}} src="images/profile2.png" />
+            
+            <div>
+              <p><b>Screen Name:</b> {this.props.screenname} <br/>
+              <b>Talent:</b> {this.props.talent}<br/>
+              <b>Zip Code:</b> {this.props.zipcode}<br/>
+              <b>Talent Background:</b> {this.props.bio}
+              </p>
+                  <a href="#" className="amber-text text-darken-1"><i className="tiny material-icons amber-text text-darken-1">comment</i> My Comments</a><br/>
+                  <a href="#" className="amber-text text-darken-1"><i className="tiny material-icons amber-text text-darken-1">thumb_up</i> Like {this.props.likes} </a><br/>
+                <button className="btn yellow darken-2">Edit My Profile</button>
+            </div>
+          </div>
+          
+        <div className="col s4 push-s2">
+          <center><h3>Live View</h3>
+          <p><i>This is how others see your profile</i></p></center>
         <div className="card">
           <div className="card-image waves-effect waves-block waves-light">
-            <img className="activator" src="images/mainimg1.jpg" />
+            <img className="activator" src="images/profile2.png" />
           </div>
           <div className="card-content">
             <p>Screen Name: {this.props.screenname} <br/></p>
@@ -23,10 +41,11 @@ class MyProfile extends React.Component {
             <p>
                 Screen Name: {this.props.screenname}<br/>
                 Zip Code: {this.props.zipcode}<br/>
+                Talent Background: {this.props.bio}
             </p>
             <div className="card-action">
-                <a href="#"><i className="tiny material-icons">comment</i> Comment</a>
-                <a href="#"><i className="tiny material-icons">thumb_up</i> Like</a>
+                <a href="#"><i className="tiny material-icons">comment</i> My Comments</a>
+                <a href="#"><i className="tiny material-icons">thumb_up</i> Like {this.props.likes} </a>
             </div>
 
             </div>
@@ -39,7 +58,7 @@ class MyProfile extends React.Component {
   }
 }
 const mapStateToProps = (state) => {
- return { username: state.user.username, screenname: state.user.screenname, bio: state.user.bio, talent: state.user.talent, zipcode: state.user.zipcode, comments: state.user.comments}
+ return { username: state.user.username, screenname: state.user.screenname, bio: state.user.bio, talent: state.user.talent, zipcode: state.user.zipcode, comments: state.user.comments, likes: state.user.likes}
 }
 
 export default connect(mapStateToProps)(MyProfile);

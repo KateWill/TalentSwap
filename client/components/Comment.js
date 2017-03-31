@@ -9,8 +9,8 @@ class Comments extends React.Component {
     return(
 
       <div>
-        <li>Posted By: {this.props.screenname}<br/>
-        Comment:{this.props.comments}</li>
+        <li>Posted By: <br/>
+          Comment:{this.props.comments}</li>
       </div>
   
     )

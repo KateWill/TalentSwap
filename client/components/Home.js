@@ -19,7 +19,7 @@ class Home extends React.Component {
     return (
       <div className="row">
        
-        <img style={inlineStyle.img} c src="images/mainimg2.png"/>
+        <img style={inlineStyle.img} src="images/mainimg2.png"/>
           <h1 style={inlineStyle.h1}>Talent Swap</h1>
           
            <h5 style={inlineStyle.h5}>Connect with others <br/> and get to <i style={{color:"#4db6ac"}}>swapping</i>
@@ -30,10 +30,10 @@ class Home extends React.Component {
           
           <center><i className="large material-icons pulse">loop</i></center> <hr />
        
-        <p style={inlineStyle.p}> Why pay to learn a new skill ?< br/>Did you know that you can leverage the skills you already have ?<br />
-        Lets say Sue plays piano,but always has wanted to learn how to sew.< br/>
+        <p style={inlineStyle.p}>Why pay to learn a new skill?< br/>Did you know that you can leverage the skills you already have?<br />
+        Let's say Sue plays piano, but has always wanted to learn how to sew.< br/>
         She can effortlessly exchange piano lessons for sewing lessons.< br />
-        Best part is that our service is <u><b>completly free.</b></u></p>
+        The best part is that our service is <u><b>completely free.</b></u></p>
        </div>
       </div>
     
