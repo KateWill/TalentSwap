@@ -10,7 +10,7 @@ class Home extends React.Component {
       img: {position: 'relative',width:"100%"},
       h5: {color:"white",fontWeight:"200", left:"41%",top:"50%", position:'absolute',textShadow: "1px 1px #404040",padding:"20px"},
       p: {color:"black",margin:"20px",textAlign:"center",padding:"10px",fontFamily:"san-serif",fontSize:"20px"},
-      btn: {position:"relative", left:"2%"}
+      btn: {position:"relative"}
   }
    var style2 = {
      h5: {color:"black"}
@@ -19,11 +19,11 @@ class Home extends React.Component {
     return (
       <div className="row">
        
-        <img style={inlineStyle.img} className="col s12" src="images/mainimg2.png"/>
+        <img style={inlineStyle.img} c src="images/mainimg2.png"/>
           <h1 style={inlineStyle.h1}>Talent Swap</h1>
           
            <h5 style={inlineStyle.h5}>Connect with others <br/> and get to <i style={{color:"#4db6ac"}}>swapping</i>
-           <br /><br/>&nbsp;&nbsp;&nbsp;<a href="/register" className="btn">Register </a>   </h5>
+           <br /><br/><a href="/register" className="btn">Learn More </a>   </h5>
            
       <div className="row" className="col s12">
         
