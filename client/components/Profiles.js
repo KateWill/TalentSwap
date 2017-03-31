@@ -80,7 +80,7 @@ class Profiles extends React.Component {
             <center>
               <form onSubmit={this.handleSubmit}>
                 <i className="small material-icons">search</i>
-                <input style={{width:"350px", fontSize:"20px", height: "35px"}} type="Talent"  value={this.state.searched} onChange={this.handleChange} ref={ n => this.talent = n } placeholder=" Talent " /><br/><br/>
+                <input  autoFocus style={{width:"350px", fontSize:"20px", height: "35px"}} type="Talent"  value={this.state.searched} onChange={this.handleChange} ref={ n => this.talent = n } placeholder=" Talent " /><br/><br/>
                 <button type="submit" style={{fontSize:"20px", height: "50px", marginRight: "20px"}} className="btn yellow darken-2"name="uprofile">Search</button>
               </form>
               

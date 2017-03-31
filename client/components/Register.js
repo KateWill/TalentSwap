@@ -22,7 +22,7 @@ class Register extends React.Component {
       data: { email,  password,  screenname, bio,  zipcode,  talent }
     }).done( user => {
       dispatch(refreshLogin(user));
-      router.push("/profiles")
+      router.push("/login")
     }).fail( err => {
       dispatch(setFlash(err.responseJSON.message, 'error'))
     });
@@ -37,7 +37,7 @@ class Register extends React.Component {
             <h3>Swap Talents With People In Your Area</h3>
             <ul style={{paddingTop:"15px"}}>
               <li style={{fontSize:"25px"}}><i className="medium material-icons">search</i> Explore New Talents</li><br/>
-              <li style={{fontSize:"18px"}}><i className="medium material-icons">mode_edit</i> Customize Your Interests & Experience</li><br/>
+              <li style={{fontSize:"18px"}}><i className="medium material-icons ">mode_edit</i> Customize Your Interests & Experience</li><br/>
               <li style={{fontSize:"20px"}}><i className="medium material-icons">person_pin</i> Connect With People In Your Area</li>    
             </ul>
           </div>
@@ -45,7 +45,7 @@ class Register extends React.Component {
           <div className="col m6 offset-m1">
             <h2 className="center">{this.props.route.title}</h2>
             <form onSubmit={this.handleSubmit}>
-              <input type="email" required={true} ref={ n => this.email = n } placeholder="Your Email" />
+              <input type="email" required={true} ref={ n => this.email = n } placeholder="Your Email" autoFocus />
               <input type="password" required={true} ref={n => this.password = n } placeholder="Set Password" />
                   <center><h5>Enter your profile information here</h5></center>
                     <input type="text" required={true} ref={ n => this.screenname = n}  placeholder="Choose a Screenname" />
