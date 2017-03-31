@@ -28,7 +28,7 @@ class Login extends React.Component {
           <div className="container" style={{width:"50%"}} >
             <h5 className="light italic">{this.props.route.title}</h5>
             <form onSubmit={this.handleSubmit}>
-              <input type="email" required={true} ref={ n => this.email = n } placeholder="email" />
+              <input autoFocus type="email" required={true} ref={ n => this.email = n } placeholder="email" />
               <input type="password" required={true} ref={n => this.password = n } placeholder="password" /> <br/>      
               <button className="btn yellow darken-2">{this.props.route.title}</button> 
             </form>
