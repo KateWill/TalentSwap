@@ -2,6 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router';
 
+function addLike ({likes}){
+  console.log('You added a like');
+  console.log({likes})
+   likes ++;
+  console.log({likes});
+}
+
 const Profile = ({username, zipcode, talent, _id, screenname, likes}) => (
   <div>
     <div className="col s4">
@@ -20,7 +27,7 @@ const Profile = ({username, zipcode, talent, _id, screenname, likes}) => (
             Zipcode: {zipcode}<br/>
         </p>
         <div className="card-action">
-            <a href="#"><i className="tiny material-icons">thumb_up</i> Like {likes} </a>
+            <a onClick={addLike} href="#"><i className="tiny material-icons">thumb_up</i> Like {likes} </a>
             <Link to={`/userpage/${_id}`}><i className="tiny material-icons">visibility</i> View</Link>
         </div>
 

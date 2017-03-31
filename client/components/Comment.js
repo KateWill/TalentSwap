@@ -10,7 +10,7 @@ class Comments extends React.Component {
 
       <div>
         <li>Posted By: <br/>
-        Comment:{this.props.comments}</li>
+          Comment:{this.props.comments}</li>
       </div>
   
     )

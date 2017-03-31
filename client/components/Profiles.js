@@ -7,7 +7,8 @@ import Profile from './Profile'
 class Profiles extends React.Component {
     constructor(props) {
     super(props);
-    this.state = { users: [], searchedUsers: null, talent: '', username: '', bio: '', screenname: '', zipcode: '', searched: '' }}
+    this.state = { users: [], searchedUsers: null, talent: '', username: '', bio: '', screenname: '', zipcode: '', searched: '', likes: 0 }
+    }
 
   componentDidMount(){
     $.ajax({
@@ -52,8 +53,8 @@ class Profiles extends React.Component {
       type: 'GET',
     }).done( users => {
       this.setState({users})
-      let { username, zipcode, talent, bio, screenname } = this.state.users[0]
-      this.setState({ username, zipcode , talent, bio, screenname})
+      let { username, zipcode, talent, bio, screenname, likes, comment } = this.state.users[0]
+      this.setState({ username, zipcode , talent, bio, screenname, likes, comment})
     }).fail( err => {
       dispatch(setFlash(err.responseJSON.message, 'error'))
     });
