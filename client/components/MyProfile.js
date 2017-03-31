@@ -7,32 +7,29 @@ class MyProfile extends React.Component {
 
     return(
       <div className="row">
-        <center><h1>MY PROFILE</h1></center>
-          <div className="col s4 push-s1">
+          <div className="col s4 push-s3">
             <h3> My Profile </h3>
+            
+              <img style={{width: "200px"}} src="images/profile2.png" />
+            
             <div>
-              <img style={{width: "300px"}} src="images/mainimg1.jpg" />
-            </div>
-            <div>
-              <p>Screen Name: {this.props.screenname} <br/></p>
-              <p>Talent: {this.props.talent}</p>
-              <p>Talent: {this.props.talent}</p>
-              <p>
-                  Screen Name: {this.props.screenname}<br/>
-                  Zip Code: {this.props.zipcode}<br/>
-                  Talent Background: {this.props.bio}
+              <p><b>Screen Name:</b> {this.props.screenname} <br/>
+              <b>Talent:</b> {this.props.talent}<br/>
+              <b>Zip Code:</b> {this.props.zipcode}<br/>
+              <b>Talent Background:</b> {this.props.bio}
               </p>
-                  <a href="#"><i className="tiny material-icons">comment</i> My Comments</a><br/>
-                  <a href="#"><i className="tiny material-icons">thumb_up</i> Like {this.props.likes} </a>
+                  <a href="#" className="amber-text text-darken-1"><i className="tiny material-icons amber-text text-darken-1">comment</i> My Comments</a><br/>
+                  <a href="#" className="amber-text text-darken-1"><i className="tiny material-icons amber-text text-darken-1">thumb_up</i> Like {this.props.likes} </a><br/>
+                <button className="btn yellow darken-2">Edit My Profile</button>
             </div>
           </div>
           
         <div className="col s4 push-s2">
-          <h3>Live View</h3>
-          <p>This is how others see your profile</p>
+          <center><h3>Live View</h3>
+          <p><i>This is how others see your profile</i></p></center>
         <div className="card">
           <div className="card-image waves-effect waves-block waves-light">
-            <img className="activator" src="images/mainimg1.jpg" />
+            <img className="activator" src="images/profile2.png" />
           </div>
           <div className="card-content">
             <p>Screen Name: {this.props.screenname} <br/></p>
@@ -47,7 +44,7 @@ class MyProfile extends React.Component {
                 Talent Background: {this.props.bio}
             </p>
             <div className="card-action">
-                <a href="#"><i className="tiny material-icons">comment</i> My Comment</a>
+                <a href="#"><i className="tiny material-icons">comment</i> My Comments</a>
                 <a href="#"><i className="tiny material-icons">thumb_up</i> Like {this.props.likes} </a>
             </div>
 

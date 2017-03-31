@@ -24,9 +24,9 @@ class Login extends React.Component {
   render() {
     return (
       <div style={{paddingBottom:"100px"}}>
-        <center><h1>Welcome Back!</h1></center>
-        <h3 className="center">{this.props.route.title}</h3>
-          <div className="container">
+        <center><h1 className="light italic">Welcome Back!</h1></center>
+          <div className="container" style={{width:"50%"}} >
+            <h5 className="light italic">{this.props.route.title}</h5>
             <form onSubmit={this.handleSubmit}>
               <input type="email" required={true} ref={ n => this.email = n } placeholder="email" />
               <input type="password" required={true} ref={n => this.password = n } placeholder="password" /> <br/>      

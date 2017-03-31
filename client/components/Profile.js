@@ -15,7 +15,7 @@ const Profile = ({username, zipcode, talent, _id, screenname, likes}) => (
       
     <div className="card">
       <div className="card-image waves-effect waves-block waves-light">
-        <img className="activator" src="images/profile1.png" />
+        <img className="activator" src="images/profile2.png" />
       </div>
       <div className="card-content">
         <span className="card-title activator grey-text text-darken-4">Talent: {talent}<i className="material-icons right">more_vert</i></span>
