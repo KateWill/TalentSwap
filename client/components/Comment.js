@@ -9,7 +9,7 @@ class Comments extends React.Component {
     return(
 
       <div>
-        <li>Posted By: <br/>
+        <li style={{width: "30%"}} className="left-align">Posted By: <br/>
           Comment:{this.props.comments}</li>
       </div>
   

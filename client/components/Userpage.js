@@ -40,37 +40,36 @@ class Userpage extends React.Component {
   
     return(
      <div>
+      <div className="row">
       <center><h1>{this.state.user.screenname}'s Profile</h1></center>
-      <div className="row">
-        <div className="col s12 push-s4">
-          <img style={{width: "300px"}} className="activator" src="/images/profile1.png" />
+        <div className="col s8 push-s2">
         
-         <p>
-          Talent: {this.state.user.talent}<br/>
-          Screen Name: {this.state.user.screenname} <br/>
-          Zipcode: {this.state.user.zipcode} <br/>
-          Talent Background: {this.state.user.bio} <br/>
+          <center><img style={{width: "300px"}} className="activator" src="/images/profile2.png" /></center>
+         
+        <center> 
+        <p className="left-align" style={{width: "30%"}}>
+          <b>Talent:</b> {this.state.user.talent}<br/>
+          <b>Screen Name:</b> {this.state.user.screenname} <br/>
+          <b>Zipcode:</b> {this.state.user.zipcode} <br/>
+          <b>Talent Background:</b> {this.state.user.bio} <br/>
         </p>
-        </div>
-      
-      
-       
+        </center>
       </div>
+    </div>
       
-    
       <div className="row">
-        <div className="col s12 push-s4">
-          <h3>View Comments</h3>
-
+        <div className="col s8 push-s2">
+        <center>
+         <h3>View Comments</h3>
+          <ul>
+              <Comments />
+          </ul>
         <form onSubmit={this.logComments}>
           <h3>Leave a comment</h3>
           <textarea style={{height:"100px", width: "300px"}} required={true} ref="comment" placeholder="Comment" />  <br/> 
           <button style={{marginTop:"15px"}} className="btn yellow darken-2">Comment</button>
         </form>
-        
-            <ul>
-              <Comments />
-            </ul>
+        </center>
           </div> 
        </div>
     </div>
