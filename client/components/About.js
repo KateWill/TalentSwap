@@ -6,7 +6,7 @@ class About extends React.Component{
 
 render(){
     var inlineStyle = {
-      h1: {color:"#4db6ac",top:"12x%",textAlign:"center",fontWeight:"300", position:'relative',textShadow: "1px 1px #404040"},
+      h1: {color:"#4db6ac",top:"12%",textAlign:"center",fontWeight:"300", position:'relative',textShadow: "1px 1px #404040"},
       img: {borderRadius:"10%",position: 'relative',width:"35%",height:"35%",marginTop:"30px"},
       h5: {color:"white",fontWeight:"200", left:"41%",top:"50%", position:'absolute',textShadow: "1px 1px #404040",padding:"20px"},
       p: {color:"black",margin:"50px",textAlign:"center",padding:"10px",fontSize:"20px"},
