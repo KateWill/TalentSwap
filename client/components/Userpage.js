@@ -44,7 +44,7 @@ class Userpage extends React.Component {
       <center><h1>{this.state.user.screenname}'s Profile</h1></center>
         <div className="col s8 push-s2">
         
-          <center><img style={{width: "300px"}} className="activator" src="/images/profile2.png" /></center>
+          <center><img style={{width: "300px"}} className="activator" src="/images/blank.png" /></center>
          
         <center> 
         <p className="left-align" style={{width: "30%"}}>

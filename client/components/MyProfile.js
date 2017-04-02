@@ -10,7 +10,7 @@ class MyProfile extends React.Component {
           <div className="col s4 push-s3">
             <h3> My Profile </h3>
             
-              <img style={{width: "200px"}} src="images/profile2.png" />
+              <img style={{width: "200px"}} src="images/blank.png" />
             
             <div>
               <p><b>Screen Name:</b> {this.props.screenname} <br/>
@@ -29,7 +29,7 @@ class MyProfile extends React.Component {
           <p><i>This is how others see your profile</i></p></center>
         <div className="card">
           <div className="card-image waves-effect waves-block waves-light">
-            <img className="activator" src="images/profile2.png" />
+            <img className="activator" src="images/blank.png" />
           </div>
           <div className="card-content">
             <p>Screen Name: {this.props.screenname} <br/></p>
