@@ -100,7 +100,7 @@ class App extends React.Component {
               <div className="col l6 s12">
                 <h5 className="white-text">Talent Swap</h5>
                 <p className="grey-text text-lighten-4 light italic fontWeight:200" style={{fontSize:"10px"}}>
-                Use at own risk.<br/>
+                Use at your own risk.<br/>
                 Talent Swap is not liable for any negative interactions that may occur.</p>
               </div>
               <div className="col l4 offset-l2 s12">

@@ -9,6 +9,8 @@ export const refreshLogin = (user = null) => {
         dataType: 'JSON'
       }).done( user => {
         dispatch(setUser(user));
+      }).fail(err=>{
+        console.log(err)
       })
     }
   }

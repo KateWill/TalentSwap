@@ -22,8 +22,8 @@ class Home extends React.Component {
         <img style={inlineStyle.img} src="images/mainimg2.png"/>
           <h1 style={inlineStyle.h1}>Talent Swap</h1>
           
-           <h5 style={inlineStyle.h5}>Connect with others <br/> and get to <i style={{color:"#4db6ac"}}>swapping</i>
-           <br /><br/><a href="/register" className="btn">Learn More </a>   </h5>
+           <h5 style={inlineStyle.h5}>Connect with others <br/> and get to <i style={{color:"#4db6ac"}}>swapping!</i>
+           <br /><br/><a href="/register" className="btn">Get Started </a>   </h5>
            
       <div className="row" className="col s12">
         
