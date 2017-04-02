@@ -8,7 +8,6 @@
     "build": "webpack --config config/webpack.config.js",
     "heroku-postbuild": "yarn build"
   },
-  
   "dependencies": {
     "autoprefixer": "^6.7.6",
     "babel-core": "^6.23.1",
@@ -25,6 +24,7 @@
     "express-session": "^1.15.1",
     "extract-text-webpack-plugin": "^2.0.0-beta",
     "file-loader": "^0.10.0",
+    "heroku": "^0.2.0",
     "jade": "~1.11.0",
     "jquery": "^3.1.1",
     "json-loader": "^0.5.4",
