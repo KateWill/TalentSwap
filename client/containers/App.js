@@ -36,7 +36,6 @@ class App extends React.Component {
         });
 
         links.push(
-          
             <li key="logout">
               <a
                 href="/"
@@ -57,7 +56,6 @@ class App extends React.Component {
                 Search
               </Link>
             </li>  
-         
         )
 
       return links;
@@ -73,7 +71,7 @@ class App extends React.Component {
     }
   }
 // This is our nav bar and mobile nav below
-// the .authLinks only show when logged in, like Dashboard
+// the .authLinks only show when logged in
   render() {
     return (
       <div>
@@ -94,7 +92,7 @@ class App extends React.Component {
         </nav>
         <Flash />
         {this.props.children}
-         <footer className="page-footer #4db6ac teal lighten-2">
+        <footer className="page-footer #4db6ac teal lighten-2">
           <div className="container">
             <div className="row">
               <div className="col l6 s12">
@@ -107,7 +105,6 @@ class App extends React.Component {
                 <h5 className="white-text">Menu</h5>
                 <ul>
                   <li><a className="grey-text text-lighten-3" href="/">Home</a></li>
-
                   <li><a className="grey-text text-lighten-3" href="/about">About</a></li>
                 </ul>
               </div>
@@ -116,12 +113,10 @@ class App extends React.Component {
           <div className="footer-copyright">
             <div className="container">
             © 2017 Talent Swap Co.
-          
             </div>
           </div>
         </footer> 
       </div>
-      
     );
   }
 }

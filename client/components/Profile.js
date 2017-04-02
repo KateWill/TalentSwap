@@ -10,9 +10,8 @@ function addLike ({likes}){
 }
 
 const Profile = ({username, zipcode, talent, _id, screenname, likes}) => (
-  <div>
-    <div className="col s4">
-      
+
+  <div className="col s4">
     <div className="card">
       <div className="card-image waves-effect waves-block waves-light">
         <img className="activator" src="images/blank.png" />
@@ -23,20 +22,16 @@ const Profile = ({username, zipcode, talent, _id, screenname, likes}) => (
       <div className="card-reveal">
         <span className="card-title grey-text text-darken-4">Talent: {talent}<i className="material-icons right">close</i></span>
         <p>
-            Screen Name: {screenname}<br/>
-            Zipcode: {zipcode}<br/>
+          Screen Name: {screenname}<br/>
+          Zipcode: {zipcode}<br/>
         </p>
         <div className="card-action">
-            <a onClick={addLike} href="#"><i className="tiny material-icons">thumb_up</i> Like 0 </a>
-            <Link to={`/userpage/${_id}`}><i className="tiny material-icons">visibility</i> View</Link>
-        </div>
-
+          <a onClick={addLike} href="#"><i className="tiny material-icons">thumb_up</i> Like 0 </a>
+          <Link to={`/userpage/${_id}`}><i className="tiny material-icons">visibility</i> View</Link>
         </div>
       </div>
     </div>
-   
   </div>
-  
 )
 
   const mapStateToProps = (state) => {

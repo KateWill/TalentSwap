@@ -75,7 +75,7 @@ class Profiles extends React.Component {
       <div>
         <div className="container">
           
-          <center><h1>Search Profiles </h1></center>
+          <center><h1 className="light italic">Search Profiles </h1></center>
           <div className="row">
             <center>
               <form onSubmit={this.handleSubmit}>
@@ -89,7 +89,7 @@ class Profiles extends React.Component {
               <br/>
               
             <div>
-              <h4>All Profiles: </h4>
+              <h4 className="light italic">All Profiles: </h4>
                 {users}     
             </div>  
           </div>

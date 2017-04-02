@@ -25,10 +25,10 @@ render(){
         
           
           <center><i className="large material-icons pulse"></i></center> 
-       <br /> <center><h5><b>Meet Zach, Kate, and Heidi the founders of Talent Swap.</b></h5> </center>
+       <br /> <center><h5 className="light italic"><b>Meet Heidi, Zach, and Kate- founders of Talent Swap.</b></h5> </center>
         <p style={inlineStyle.p}>
         Talent Swap connects people with various backgrounds and skills, 
-        allowing them to find the talents they are in need of and arrange a swap! </br>
+        allowing them to find the talents they are in need of and to arrange for a swap! 
         Registered users can search the Talent Swap database for other users in their area that are offering a skill they need. 
         For example, a dentist may want to make a trade with someone who can teach his son guitar lessons. 
         Or a web designer might make a website for a local painter in exchange for painting his baby’s nursery. 

@@ -41,13 +41,14 @@ class Userpage extends React.Component {
     return(
      <div>
       <div className="row">
-      <center><h1>{this.state.user.screenname}'s Profile</h1></center>
+      <center><h2 className="light italic">Profile for:</h2>
+        <h3 className="light italic">{this.state.user.screenname}</h3></center>
         <div className="col s8 push-s2">
         
           <center><img style={{width: "300px"}} className="activator" src="/images/blank.png" /></center>
          
         <center> 
-        <p className="left-align" style={{width: "30%"}}>
+        <p className="left-align light italic" style={{width: "30%"}}>
           <b>Talent:</b> {this.state.user.talent}<br/>
           <b>Screen Name:</b> {this.state.user.screenname} <br/>
           <b>Zipcode:</b> {this.state.user.zipcode} <br/>
@@ -60,12 +61,12 @@ class Userpage extends React.Component {
       <div className="row">
         <div className="col s8 push-s2">
         <center>
-         <h3>View Comments</h3>
+         <h3 className="light italic">View Comments</h3>
           <ul>
               <Comments />
           </ul>
         <form onSubmit={this.logComments}>
-          <h3>Leave a comment</h3>
+          <h3 className="light italic">Leave a comment</h3>
           <textarea style={{height:"100px", width: "300px"}} required={true} ref="comment" placeholder="Comment" />  <br/> 
           <button style={{marginTop:"15px"}} className="btn yellow darken-2">Comment</button>
         </form>
