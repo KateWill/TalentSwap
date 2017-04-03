@@ -2,6 +2,9 @@
   "name": "talent-swap",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "7.4.0"
+  },
   "scripts": {
     "start": "node ./bin/www",
     "dev_server": "webpack-dev-server --progress --config config/webpack.config.js",
