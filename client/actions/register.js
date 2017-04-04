@@ -4,7 +4,7 @@ export const refreshLogin = (user = null) => {
       dispatch(setUser(user))
     } else {
       $.ajax({
-        url: '/api/register/user',
+        url: '/api/auth/user',
         type: 'GET',
         dataType: 'JSON'
       }).done( user => {

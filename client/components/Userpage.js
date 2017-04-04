@@ -4,12 +4,12 @@ import Comments from './Comment';
 
 
 class Userpage extends React.Component {
-  state = { user: [], comment: '' }
+  state = { user: [] }
   componentDidMount(){
     $.ajax({
       url: `/api/auth/getuser/${this.props.params.id}`,
       type: 'GET',
-      //data: { email,  password,  screenname, bio,  zipcode,  talent }
+      //data: { email,  password,  screenname, bio,  zipcode,  talent, likes }
     }).done( user => {
       this.setState({user})
       //this.setState({user: []})

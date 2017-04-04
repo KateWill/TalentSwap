@@ -11,22 +11,20 @@ class Profile extends React.Component {
     }
   
   addLike = () => {
+//      $.ajax({
+//      url: `/api/auth/${likes}`,
+//      type: 'GET',
+//  }).done( users => {
+//     this.setState({users})
+//     let likes = this.state.user.likes
+//     this.setState({likes})
+//   }).fail( err => {
+//      dispatch(setFlash(err.responseJSON.message, 'error'))
+//    });
+
     this.setState({likes: ++this.state.likes})
   }
   
-    
-  //   // $.ajax({
-  //   //   url: `/api/auth/${likes}`,
-  //   //   type: 'GET',
-  //   // }).done( users => {
-  //   //   this.setState({users})
-  //   //   let likes = this.state.user.likes
-  //   //   this.setState({likes})
-  //   // }).fail( err => {
-  //   //   dispatch(setFlash(err.responseJSON.message, 'error'))
-  //   // });
-  // } 
-
 render() {
   return(
     
@@ -46,8 +44,8 @@ render() {
         </p>
         
          <CardLinks
-          key={this.user}
-          user={this.props.user}
+          key={this.props.id}
+          id={this.props.id}
           addLike = {this.addLike}
           likes = {this.state.likes}
          />

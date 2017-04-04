@@ -88,6 +88,7 @@ class Profiles extends React.Component {
       return(
         <Profile 
           key={user._id}
+          id={user._id}
           // user={this.state.user}
           //addLike = {this.handleAddLike.bind(this)}
           {...user}

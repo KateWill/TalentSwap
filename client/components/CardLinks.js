@@ -14,7 +14,7 @@ render(){
   <div>
     <div className="card-action">
       <a onClick={this.props.addLike}><i className="tiny material-icons">thumb_up</i> Likes {this.props.likes}</a>
-      <Link to={`/userpage/${this._id}`}><i className="tiny material-icons">visibility</i> View</Link>
+      <Link to={`/userpage/${this.props.id}`}><i className="tiny material-icons">visibility</i> View</Link>
     </div>
   </div>
 )

@@ -9,7 +9,8 @@ const enhancers = compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f
 );
 
-const remember = document.getElementById('app').dataset.remember;
+const data = document.getElementById('app').dataset.remember;
+const remember = data === 'true';
 
 const store = createStore(rootReducer, { remember }, enhancers);
 
