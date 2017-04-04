@@ -2,22 +2,17 @@ import React from 'react';
 import {Link} from 'react-router';
 import { connect } from 'react-redux';
 
-class Comments extends React.Component {
+class Comment extends React.Component {
   
   render(){
 
     return(
-
-      <div>
-        <li style={{width: "30%"}} className="left-align">Posted By: <br/>
-          Comment:{this.props.comments}</li>
-      </div>
-  
+        <li style={{width: "30%"}} className="left-align">{this.props.comment}</li>
     )
   }
 }
 
-const mapStateToProps = (state) => {
- return { username: state.user.username, screenname: state.user.screenname, bio: state.user.bio, talent: state.user.talent, zipcode: state.user.zipcode, comments: state.user.comments}
-}
-export default connect(mapStateToProps)(Comments);
+// const mapStateToProps = (state) => {
+//  return { username: state.user.username, screenname: state.user.screenname, bio: state.user.bio, talent: state.user.talent, zipcode: state.user.zipcode, comments: state.user.comments}
+// }
+export default connect()(Comment);
