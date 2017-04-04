@@ -54,10 +54,13 @@ class Userpage extends React.Component {
           <b>Zipcode:</b> {this.state.user.zipcode} <br/>
           <b>Talent Background:</b> {this.state.user.bio} <br/>
         </p>
+        <button style={{marginTop:"15px"}} className="btn yellow darken-2">Message Me</button>
+        
         </center>
       </div>
     </div>
       
+
       <div className="row">
         <div className="col s8 push-s2">
         <center>
