@@ -28,7 +28,7 @@ class Userpage extends React.Component {
     console.log (comment);
 
     this.setState({comments: [...this.state.comments, comment]})
-    
+    this.comment.value ='';
     //console.log(this.comment);
     //comment.reset();
     //  $.ajax({
