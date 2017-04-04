@@ -86,5 +86,10 @@ router.get('/:talent', (req,res) => {
   })
 })
 
+router.get('/:likes', (req,res) => {
+  User.find({ likes: req.params.likes }, (err,user)=>{
+    return res.json(user)
+  })
+})
 
 module.exports = router;

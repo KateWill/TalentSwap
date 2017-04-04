@@ -7,7 +7,7 @@ import Profile from './Profile'
 class Profiles extends React.Component {
     constructor(props) {
     super(props);
-    this.state = { users: [], searchedUsers: null, talent: '', username: '', bio: '', screenname: '', zipcode: '', searched: '', likes: 0 }
+    this.state = { users: [], searchedUsers: null, talent: '', username: '', bio: '', screenname: '', zipcode: '', searched: ''}
     }
 
   componentDidMount(){
@@ -59,14 +59,37 @@ class Profiles extends React.Component {
       dispatch(setFlash(err.responseJSON.message, 'error'))
     });
   }
-   
+  // handleAddLike(likes){
+  //   console.log("Likes passed in from Profiles:", likes);
+  //   let addedLike = likes;
+  //   let currentLikes = this.state.likes;
+  //   console.log("current state of likes:", currentLikes)
+  //   likes = (addedLike + currentLikes);
+  //   console.log("New State of Likes:", likes);
+  //   this.setState({likes: likes});
+    
+  //   // $.ajax({
+  //   //   url: `/api/auth/${likes}`,
+  //   //   type: 'GET',
+  //   // }).done( users => {
+  //   //   this.setState({users})
+  //   //   let likes = this.state.user.likes
+  //   //   this.setState({likes})
+  //   // }).fail( err => {
+  //   //   dispatch(setFlash(err.responseJSON.message, 'error'))
+  //   // });
+  // } 
+
   render(){
     let { searchedUsers, users: initialUsers } = this.state;
     let filteredUsers = searchedUsers || initialUsers;
     let users = filteredUsers.map( user => {
+      console.log(user)
       return(
         <Profile 
           key={user._id}
+          // user={this.state.user}
+          //addLike = {this.handleAddLike.bind(this)}
           {...user}
         />
       )
@@ -83,10 +106,7 @@ class Profiles extends React.Component {
                 <input  autoFocus style={{width:"350px", fontSize:"20px", height: "35px"}} type="Talent"  value={this.state.searched} onChange={this.handleChange} ref={ n => this.talent = n } placeholder=" Talent " /><br/><br/>
                 <button type="submit" style={{fontSize:"20px", height: "50px", marginRight: "20px"}} className="btn yellow darken-2"name="uprofile">Search</button>
               </form>
-              
-            </center>
-
-              <br/>
+            </center><br/>
               
             <div>
               <h4 className="light italic">All Profiles: </h4>
@@ -101,7 +121,7 @@ class Profiles extends React.Component {
 }
 
 const mapStateToProps = (state) => {
- return { username: state.user.username, screenname: state.user.screenname, bio: state.user.bio, talent: state.user.talent, zipcode: state.user.zipcode}
+ return { username: state.user.username, screenname: state.user.screenname, bio: state.user.bio, talent: state.user.talent, zipcode: state.user.zipcode }
 }
 
 function matchDispatchToProps(dispatch){
