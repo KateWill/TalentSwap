@@ -11,7 +11,7 @@ let User = new Schema({
   bio: { type: String },
   screenname: { type: String },
   role: { type: String, default: 'user' },
-  comment: [{type: String}],
+  // comments: {type: String},
   likes: {type: Number}
 });
 

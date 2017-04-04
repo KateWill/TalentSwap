@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Comments from './Comment';
+import Comment from './Comment';
 
 
 class Userpage extends React.Component {
-  state = { user: [], comment: '' }
+  state = { user: [], comments: [] }
   componentDidMount(){
     $.ajax({
       url: `/api/auth/getuser/${this.props.params.id}`,
@@ -20,24 +20,25 @@ class Userpage extends React.Component {
 
   logComments = (e) =>{
     e.preventDefault();
-    let {refs: {comment}, form } = this;
-    console.log (`${comment.value}`);
-    this.comment = `${comment.value}`;
-    console.log(this.comment);
+    let comment = this.comment.value;
+    //this.comment = `${comment.value}`;
+    // let comments = [this.comment.value, ...comments];
+    console.log (comment);
+
+    this.setState({comments: [...this.state.comments, comment]})
+    
+    //console.log(this.comment);
     //comment.reset();
     //  $.ajax({
     //   url: `/api/auth/comment`,
     //   type: 'POST',
-    //   data: { email, screenname, bio,  zipcode,  talent, comment }
+    //   data: {[comment, ...comments] }
     // }).done( user => {
-    //   dispatch(refreshLogin(user));
-    //   //router.push("/profiles")
-    // }).fail( err => {
-    //   dispatch(setFlash(err.responseJSON.message, 'error'))
+    // }).fail( alert("comment did not post")
     // });
   }
   render(){
-  
+    const allComments = this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)
     return(
      <div>
       <div className="row">
@@ -66,11 +67,11 @@ class Userpage extends React.Component {
         <center>
          <h3 className="light italic">View Comments</h3>
           <ul>
-              <Comments />
+            {allComments}
           </ul>
         <form onSubmit={this.logComments}>
           <h3 className="light italic">Leave a comment</h3>
-          <textarea style={{height:"100px", width: "300px"}} required={true} ref="comment" placeholder="Comment" />  <br/> 
+          <textarea style={{height:"100px", width: "300px"}} ref={ n => this.comment = n} placeholder="Comment" />  <br/> 
           <button style={{marginTop:"15px"}} className="btn yellow darken-2">Comment</button>
         </form>
         </center>
