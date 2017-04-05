@@ -44,8 +44,7 @@ class Userpage extends React.Component {
     return(
       <div className="row">
         <div className="col s4 push-s2">
-          <center><h2 className="light italic">Profile for:</h2>
-          <h3 className="light italic">{this.state.user.screenname}</h3></center>
+          <center><h3 className="light italic">{this.state.user.screenname}</h3></center>
             <center><img style={{width: "300px"}} className="activator" src="/images/blank.png" /></center>
             <center> 
             <p className="left-align light italic" style={{paddingLeft: "11%"}}>
