@@ -25,7 +25,7 @@ render(){
         
           
           <center><i className="large material-icons pulse"></i></center> 
-       <br /> <center><h5 className="light italic"><b>Meet Heidi, Zach, and Kate- founders of Talent Swap.</b></h5> </center>
+       <br /> <center><h5 className="light italic"><b>Meet Heidi, Zach, and Kate co-founders of Talent Swap.</b></h5> </center>
         <p style={inlineStyle.p}>
         Talent Swap connects people with various backgrounds and skills, 
         allowing them to find the talents they are in need of and to arrange for a swap! 
