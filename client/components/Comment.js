@@ -7,7 +7,7 @@ class Comment extends React.Component {
   render(){
 
     return(
-        <li style={{width: "30%"}} className="left-align">{this.props.comment}</li>
+        <li style={{width: "67%"}} className="left-align">{this.props.comment}<br/><br/></li>
     )
   }
 }
