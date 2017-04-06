@@ -15,7 +15,7 @@ render(){
     return(
 <div className="row"className="col s12">
           <h1 style={inlineStyle.h1}>Meet the Team</h1>
-       <center> <img style={inlineStyle.img} src="images/aboutimg.png"/> </center>
+       <center> <img style={inlineStyle.img} src="images/aboutfinal.jpg"/> </center>
          
           
            <h5 style={inlineStyle.h5}>
