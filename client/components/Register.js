@@ -34,20 +34,22 @@ class Register extends React.Component {
         <div className="container">
          <div className="row">
           <div className="col m5 pull-m1">
-            <h3>Swap Talents With People In Your Area</h3>
+            <h3 className="light italic">Swap Talents With People In Your Area</h3>
             <ul style={{paddingTop:"15px"}}>
+
               <li style={{fontSize:"18px"}}><i className="medium material-icons">search</i> Explore New Talents</li><br/>
               <li style={{fontSize:"18px"}}><i className="medium material-icons ">mode_edit</i> Customize Your Interests & Experience</li><br/>
               <li style={{fontSize:"18px"}}><i className="medium material-icons">person_pin</i> Connect With People In Your Area</li>    
+
             </ul>
           </div>
         
           <div className="col m6 offset-m1">
-            <h2 className="center">{this.props.route.title}</h2>
+            <h2 className="center light italic">{this.props.route.title}</h2>
             <form onSubmit={this.handleSubmit}>
               <input type="email" required={true} ref={ n => this.email = n } placeholder="Your Email" autoFocus />
               <input type="password" required={true} ref={n => this.password = n } placeholder="Set Password" />
-                  <center><h5>Enter your profile information here</h5></center>
+                  <center><h4 className="light italic">Enter your profile information here</h4></center>
                     <input type="text" required={true} ref={ n => this.screenname = n}  placeholder="Choose a Screenname" />
                     <input type="text" required={true} ref={ n => this.zipcode = n }  placeholder="Your Zip Code" />
                     <input type="text" required={true} ref={ n => this.talent = n } placeholder="Your Talent for Trade" />
