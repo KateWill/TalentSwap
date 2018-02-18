@@ -22,7 +22,7 @@ class Register extends React.Component {
       data: { email,  password,  screenname, bio,  zipcode,  talent }
     }).done( user => {
       dispatch(refreshLogin(user));
-      router.push("/login")
+      router.push("/profiles")
     }).fail( err => {
       dispatch(setFlash(err.responseJSON.message, 'error'))
     });

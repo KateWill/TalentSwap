@@ -43,30 +43,27 @@ class Userpage extends React.Component {
     const allComments = this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)
     return(
       <div className="row">
-        <div className="col s4 push-s2">
+        <div className="col s6 push-s2">
           <center><h3 className="light italic">{this.state.user.screenname}</h3></center>
-            <center><img style={{width: "300px"}} className="activator" src="/images/blank.png" /></center>
+            <center><img style={{width: "250px"}} className="activator" src="/images/blank.png" /></center>
             <center> 
-            <p className="left-align light italic" style={{paddingLeft: "11%"}}>
+            <p className=" light italic">
               <b>Talent:</b> {this.state.user.talent}<br/>
               <b>Screen Name:</b> {this.state.user.screenname} <br/>
               <b>Zipcode:</b> {this.state.user.zipcode} <br/>
               <b>Talent Background:</b> {this.state.user.bio} <br/>
+              <b>Leave a comment</b>
             </p>
-            <button style={{marginTop:"15px"}} className="btn yellow darken-2">Message Me</button>
-            </center>
-        </div>
-        <div className="col s4 push-s2">
-          <center>
-          <h3 className="light italic" style={{paddingTop: "90px"}}>View Comments</h3>
-            <ul>
-              {allComments}
-            </ul>
+            
           <form onSubmit={this.logComments}>
-            <h3 className="light italic">Leave a comment</h3>
+            
             <textarea style={{height:"100px", width: "300px"}} ref={ n => this.comment = n} placeholder="Comment" />  <br/> 
             <button style={{marginTop:"15px"}} className="btn yellow darken-2">Comment</button>
           </form>
+          <h5 className="light italic" style={{paddingTop: "90px"}}>Comments:</h5>
+          <ul>
+              {allComments}
+            </ul>
           </center>
         </div> 
       </div>

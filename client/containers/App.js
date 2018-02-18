@@ -104,6 +104,7 @@ class App extends React.Component {
               <div className="col l4 offset-l2 s12">
                 <h5 className="white-text">Menu</h5>
                 <ul>
+                <li><a className="grey-text text-lighten-3" href="/register">Register</a></li>
                   <li><a className="grey-text text-lighten-3" href="/">Home</a></li>
                   <li><a className="grey-text text-lighten-3" href="/about">About</a></li>
                 </ul>

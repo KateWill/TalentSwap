@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class Home extends React.Component {
-  
+
   render(){
     var inlineStyle = {
       h1: {color:"white", left:"38%",top:"40%",fontWeight:"300", position:'absolute',textShadow: "1px 1px #404040"},
